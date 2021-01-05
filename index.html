@@ -1,0 +1,2729 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Import Google Icon Font-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!--Import materialize.css-->
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="css/materialize.min.css"
+      media="screen,projection"
+    />
+    <link type="text/css" rel="stylesheet" href="css/main.css" />
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Forecaster</title>
+  </head>
+
+  <body class="green darken-4" id="home-page">
+    <header class="header">
+      <div class="navbar-fixed">
+        <nav class="green darken-1">
+          <div class="container">
+            <div class="nav-wrapper">
+              <a href="index.html" class="brand-logo">
+                <img class="logo" src="img/logo.png" alt="" />
+                Forecaster
+              </a>
+              <a
+                href="#"
+                data-activates="profile-view"
+                class="button-collapse show-on-large right"
+              >
+                <i class="material-icons">menu</i>
+              </a>
+              <ul class="right hide-on-med-and-down">
+                <li class="active"><a href="index.html">Weather</a></li>
+                <li><a href="radar.html">Radar</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <!-- Side nav Profile -->
+              </ul>
+              <ul id="profile-view" class="side-nav">
+                <li class="user-view">
+                  <div class="background">
+                    <img src="img/user_background.jpg" alt="" />
+                  </div>
+                  <a href="#user">
+                    <img
+                      src="img/news/comments/myavatar.jpg"
+                      alt=""
+                      class="circle"
+                    />
+                  </a>
+                  <a href="#name">
+                    <span class="name white-text">Leonardo Chica</span>
+                  </a>
+                  <a href="#email">
+                    <span class="email white-text"
+                      >leonardochica@gmail.com
+                    </span>
+                  </a>
+                </li>
+                <li><a href="index.html">Weather</a></li>
+                <li><a href="radar.html">Radar</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><div class="divider"></div></li>
+                <li>
+                  <a
+                    class="navbar__button btn green darken-3 waves-effect waves-yellow"
+                    href="profile.html"
+                    >Profile</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Weather ticker -->
+    <div
+      class="ticker__container green darken-1 white-text hide-on-med-and-down"
+    >
+      <div class="ticker-wrapper">
+        <div class="ticker">
+          <div class="ticker__item">
+            <img class="icon icon--weather" src="img/icons/sunny.png" alt="" />
+            <span class="ticker__title">Miami</span>
+            <span class="ticker__text">
+              <span class="yellow-text text-darken-1"> 75&#176;</span> |
+              <span class="yellow-text text-darken-1"> 85&#176;</span>
+            </span>
+          </div>
+          <div class="ticker__item">
+            <img class="icon icon--weather" src="img/icons/cloudy.png" alt="" />
+            <span class="ticker__title">Houston</span>
+            <span class="ticker__text">
+              <span class="yellow-text text-darken-1"> 65&#176;</span> |
+              <span class="yellow-text text-darken-1"> 70&#176;</span>
+            </span>
+          </div>
+          <div class="ticker__item">
+            <img class="icon icon--weather" src="img/icons/snow.png" alt="" />
+            <span class="ticker__title">Chicago</span>
+            <span class="ticker__text">
+              <span class="yellow-text text-darken-1"> 30&#176;</span> |
+              <span class="yellow-text text-darken-1"> 32&#176;</span>
+            </span>
+          </div>
+          <div class="ticker__item">
+            <img class="icon icon--weather" src="img/icons/rainy.png" alt="" />
+            <span class="ticker__title">Seattle</span>
+            <span class="ticker__text">
+              <span class="yellow-text text-darken-1"> 45&#176;</span> |
+              <span class="yellow-text text-darken-1"> 55&#176;</span>
+            </span>
+          </div>
+          <div class="ticker__item">
+            <img
+              class="icon icon--weather"
+              src="img/icons/thunderstorm.png"
+              alt=""
+            />
+            <span class="ticker__title">Los Angeles</span>
+            <span class="ticker__text">
+              <span class="yellow-text text-darken-1"> 66&#176;</span> |
+              <span class="yellow-text text-darken-1"> 72&#176;</span>
+            </span>
+          </div>
+          <div class="ticker__item">
+            <img class="icon icon--weather" src="img/icons/cloudy.png" alt="" />
+            <span class="ticker__title">New York</span>
+            <span class="ticker__text">
+              <span class="yellow-text text-darken-1"> 47&#176;</span> |
+              <span class="yellow-text text-darken-1"> 60&#176;</span>
+            </span>
+          </div>
+          <div class="ticker__item">
+            <img class="icon icon--weather" src="img/icons/rainy.png" alt="" />
+            <span class="ticker__title">Alburquerque</span>
+            <span class="ticker__text">
+              <span class="yellow-text text-darken-1"> 65&#176;</span> |
+              <span class="yellow-text text-darken-1"> 76&#176;</span>
+            </span>
+          </div>
+          <div class="ticker__item">
+            <img class="icon icon--weather" src="img/icons/rainy.png" alt="" />
+            <span class="ticker__title">Dallas</span>
+            <span class="ticker__text">
+              <span class="yellow-text text-darken-1"> 70&#176;</span> |
+              <span class="yellow-text text-darken-1"> 87&#176;</span>
+            </span>
+          </div>
+          <div class="ticker__item">
+            <img class="icon icon--weather" src="img/icons/cloudy.png" alt="" />
+            <span class="ticker__title">Indianapolis</span>
+            <span class="ticker__text">
+              <span class="yellow-text text-darken-1"> 40&#176;</span> |
+              <span class="yellow-text text-darken-1"> 55&#176;</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section: Search -->
+    <section class="section__search">
+      <div class="row">
+        <div class="col s12 m8 l6">
+          <h5 class="search__title white-text text-darken-1">
+            Search City or Zip Code
+          </h5>
+          <div class="input-field">
+            <input
+              type="text"
+              name="locations"
+              id="search"
+              class="search__input grey lighten-2 green-text text-darken-3 autocomplete"
+            />
+            <label for="search" class="label-icon">
+              <i class="material-icons green-text text-darken-1">search</i>
+            </label>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Live News Section -->
+    <aside class="section section__live row">
+      <div class="col s12">
+        <div class="chip blue darken-4">
+          <a
+            href="#modal__live"
+            class="btn btn-floating btn--live btn-small yellow darken-1 accent-4 pulse modal-trigger"
+          >
+            <i class="material-icons blue-text text-darken-4">tv</i>
+          </a>
+          <span class="yellow-text text-darken-1">
+            Weather TV Live
+          </span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Section: Slider  -->
+    <section class="section section__slider">
+      <div class="row white">
+        <div class="col s12 m12 l8 slider">
+          <ul class="slides">
+            <li class="slides__item">
+              <a href="#">
+                <img
+                  class="slide__image responsive-img"
+                  src="img/showcase/img1.jpg"
+                  alt=""
+                />
+              </a>
+              <div class="slide__date grey-text">
+                <p>WEATHER</p>
+                <p>May 16, 2020</p>
+              </div>
+              <h5 class="green-text">
+                Hurricane Season starts this weekend
+              </h5>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
+                consequatur laudantium sed.
+                <a href="#" class="slide__link green-text text-darken-2"
+                  >Check Now<i
+                    class="slide__icon material-icons green-text text-darken-2"
+                    >chevron_right</i
+                  ></a
+                >
+              </p>
+            </li>
+            <li class="slides__item">
+              <a href="#">
+                <img
+                  class="slide__image responsive-img"
+                  src="img/showcase/img2.jpg"
+                  alt=""
+                />
+              </a>
+              <div class="slide__date grey-text">
+                <p>WEATHER</p>
+                <p>May 17, 2020</p>
+              </div>
+              <h5 class="green-text">
+                Thunderstorms Coming next week
+              </h5>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
+                consequatur laudantium sed.
+                <a href="#" class="slide__link green-text text-darken-2"
+                  >Check Our Forecast<i
+                    class="slide__icon material-icons green-text text-darken-2"
+                    >chevron_right</i
+                  ></a
+                >
+              </p>
+            </li>
+            <li class="slides__item">
+              <a href="#">
+                <img
+                  class="slide__image responsive-img"
+                  src="img/showcase/img3.jpg"
+                  alt=""
+                />
+              </a>
+              <div class="slide__date grey-text">
+                <p>CLIMATE CHANGE</p>
+                <p>May 10, 2020</p>
+              </div>
+              <h5 class="green-text">
+                Global Warming Concerns
+              </h5>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
+                consequatur laudantium sed.
+                <a href="#" class="slide__link green-text text-darken-2"
+                  >How Can We Help?<i
+                    class="slide__icon material-icons green-text text-darken-2"
+                    >chevron_right</i
+                  ></a
+                >
+              </p>
+            </li>
+          </ul>
+        </div>
+        <!-- Collection Thumbnails -->
+        <div class="col m4 hide-on-med-and-down">
+          <h6 class="collection__heading green-text text-darken-4">
+            Weather Latest
+          </h6>
+          <ul class="collection">
+            <li class="collection-item">
+              <a href="#" class="collection__link green-text text-darken-3">
+                <img
+                  class="collection__image"
+                  src="img/showcase/img1.jpg"
+                  alt=""
+                  class="responsive-img"
+                />
+                <div class="collection__text">
+                  <div>Hurricane Season is Here</div>
+                  <div class="chip">North America</div>
+                </div>
+              </a>
+            </li>
+            <li class="collection-item">
+              <a href="#" class="collection__link green-text text-darken-3">
+                <img
+                  class="collection__image"
+                  src="img/showcase/img2.jpg"
+                  alt=""
+                  class="responsive-img"
+                />
+                <div class="collection__text">
+                  <div>
+                    Thunderstorms in South West of Houston
+                  </div>
+                  <div class="chip">Texas</div>
+                </div>
+              </a>
+            </li>
+            <li class="collection-item">
+              <a href="#" class="collection__link green-text text-darken-3">
+                <img
+                  class="collection__image"
+                  src="img/showcase/img7.jpg"
+                  alt=""
+                  class="responsive-img"
+                />
+                <div class="collection__text">
+                  <div>Global Warming Awareness</div>
+                  <div class="chip">WorldWide</div>
+                </div>
+              </a>
+            </li>
+            <li class="collection-item">
+              <a href="#" class="collection__link green-text text-darken-3">
+                <img
+                  class="collection__image"
+                  src="img/showcase/img4.jpg"
+                  alt=""
+                  class="responsive-img"
+                />
+                <div class="collection__text">
+                  <div>Aurora Borealis</div>
+                  <div class="chip">Canada</div>
+                </div>
+              </a>
+            </li>
+            <li class="collection-item">
+              <a href="#" class="collection__link green-text text-darken-3">
+                <img
+                  class="collection__image"
+                  src="img/showcase/img5.jpg"
+                  alt=""
+                  class="responsive-img"
+                />
+                <div class="collection__text">
+                  <div>Scattered Storms</div>
+                  <div class="chip">Washington</div>
+                </div>
+              </a>
+            </li>
+            <li class="collection-item">
+              <a href="#" class="collection__link green-text text-darken-3">
+                <img
+                  class="collection__image"
+                  src="img/showcase/img6.jpg"
+                  alt=""
+                  class="responsive-img"
+                />
+                <div class="collection__text">
+                  <div>National Weather Forecast</div>
+                  <div class="chip">United States</div>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Day Forecast -->
+    <section class="section section__forecast">
+      <div class="row section__container">
+        <div class="forecast--week col s12 l8 grey lighten-3">
+          <h5 class="forecast__title green-text text-darken-2">
+            7-Day Forecast
+            <span class="grey-text text-darken-1 right">Houston, Texas</span>
+          </h5>
+
+          <ul class="tabs tabs-fixed-width grey lighten-2">
+            <li class="tab col s2">
+              <a class="green-text text-darken-2" href="#tab-1">Monday</a>
+            </li>
+            <li class="tab col s2">
+              <a class="green-text text-darken-2" href="#tab-2">Tuesday</a>
+            </li>
+            <li class="tab col s2">
+              <a class="green-text text-darken-2" href="#tab-3">Wednesday</a>
+            </li>
+            <li class="tab col s2">
+              <a class="green-text text-darken-2" href="#tab-4">Thursday</a>
+            </li>
+            <li class="tab col s2">
+              <a class="green-text text-darken-2" href="#tab-5">Friday</a>
+            </li>
+            <li class="tab col s2">
+              <a class="green-text text-darken-2" href="#tab-6">Saturday</a>
+            </li>
+            <li class="tab col s2">
+              <a class="green-text text-darken-2" href="#tab-7">Sunday</a>
+            </li>
+          </ul>
+          <!-- Tabs Text: Monday -->
+          <div id="tab-1" class="col s12 grey lighten-3">
+            <h5 class="center">May 18</h5>
+            <div class="row forecast__item center">
+              <div class="col s4 forecast__subitem">
+                <h6>Morning</h6>
+                <img
+                  class="icon icon--forecast"
+                  src="img/icons/cloudy.png"
+                  alt=""
+                />
+                <div>Cloudy</div>
+                <p>75&#176; | 85&#176;</p>
+                <div class="blue-text text-darken-4">Rain Prob.</div>
+                <p>
+                  20%<i class="material-icons blue-text text-lighten-1"
+                    >opacity</i
+                  >
+                </p>
+              </div>
+              <div class="col s4 forecast__subitem center">
+                <h6>Afternoon</h6>
+                <img
+                  class="icon icon--forecast"
+                  src="img/icons/rainy.png"
+                  alt=""
+                />
+                <div>Rainy</div>
+                <p>65&#176; | 73&#176;</p>
+                <div class="blue-text text-darken-4">Rain Prob.</div>
+                <p>
+                  50%<i class="material-icons blue-text text-lighten-1"
+                    >opacity</i
+                  >
+                </p>
+              </div>
+              <div class="col s4 forecast__subitem center">
+                <h6>Evening</h6>
+                <img
+                  class="icon icon--forecast"
+                  src="img/icons/cloudy-evening.png"
+                  alt=""
+                />
+                <div>Partly Cloudy</div>
+                <p>52&#176; | 63&#176;</p>
+                <div class="blue-text text-darken-4">Rain Prob.</div>
+                <p>
+                  30%<i class="material-icons blue-text text-lighten-1"
+                    >opacity</i
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Tabs Text: Tuesday -->
+          <div id="tab-2" class="col s12 grey lighten-3">
+            <h5 class="center">May 19</h5>
+            <div class="row forecast__item center">
+              <div class="col s4 forecast__subitem">
+                <h6>Morning</h6>
+                <img
+                  class="icon icon--forecast"
+                  src="img/icons/sunny.png"
+                  alt=""
+                />
+                <div>Sunny</div>
+                <p>79&#176; | 86&#176;</p>
+                <div class="blue-text text-darken-4">Rain Prob.</div>
+                <p>
+                  0%<i class="material-icons blue-text text-lighten-1"
+                    >opacity</i
+                  >
+                </p>
+              </div>
+              <div class="col s4 forecast__subitem center">
+                <h6>Afternoon</h6>
+                <img
+                  class="icon icon--forecast"
+                  src="img/icons/cloudy.png"
+                  alt=""
+                />
+                <div>Partly Cloudy</div>
+                <p>75&#176; | 83&#176;</p>
+                <div class="blue-text text-darken-4">Rain Prob.</div>
+                <p>
+                  10%<i class="material-icons blue-text text-lighten-1"
+                    >opacity</i
+                  >
+                </p>
+              </div>
+              <div class="col s4 forecast__subitem center">
+                <h6>Evening</h6>
+                <img
+                  class="icon icon--forecast"
+                  src="img/icons/clear-sky-evening.png"
+                  alt=""
+                />
+                <div>Clear Sky</div>
+                <p>55&#176; | 65&#176;</p>
+                <div class="blue-text text-darken-4">Rain Prob.</div>
+                <p>
+                  0%<i class="material-icons blue-text text-lighten-1"
+                    >opacity</i
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Tabs Text: Wednesday -->
+          <div id="tab-3" class="col s12 grey lighten-3">
+            <h5 class="center">May 20</h5>
+            <div class="row forecast__item center">
+              <div class="col s4 forecast__subitem">
+                <h6>Morning</h6>
+                <img
+                  class="icon icon--forecast"
+                  src="img/icons/cloudy.png"
+                  alt=""
+                />
+                <div>Partly Cloudy</div>
+                <p>76&#176; | 88&#176;</p>
+                <div class="blue-text text-darken-4">Rain Prob.</div>
+                <p>
+                  10%<i class="material-icons blue-text text-lighten-1"
+                    >opacity</i
+                  >
+                </p>
+              </div>
+              <div class="col s4 forecast__subitem center">
+                <h6>Afternoon</h6>
+                <img
+                  class="icon icon--forecast"
+                  src="img/icons/thunderstorm.png"
+                  alt=""
+                />
+                <div>Thunderstorms</div>
+                <p>74&#176; | 83&#176;</p>
+                <div class="blue-text text-darken-4">Rain Prob.</div>
+                <p>
+                  70%<i class="material-icons blue-text text-lighten-1"
+                    >opacity</i
+                  >
+                </p>
+              </div>
+              <div class="col s4 forecast__subitem center">
+                <h6>Evening</h6>
+                <img
+                  class="icon icon--forecast"
+                  src="img/icons/rainy-evening.png"
+                  alt=""
+                />
+                <div>Scattered Thunderstorms</div>
+                <p>50&#176; | 65&#176;</p>
+                <div class="blue-text text-darken-4">Rain Prob.</div>
+                <p>
+                  40%<i class="material-icons blue-text text-lighten-1"
+                    >opacity</i
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Tabs Text: Thursday -->
+          <div id="tab-4" class="col s12 grey lighten-3">
+            <h5 class="center">May 21</h5>
+            <div class="row forecast__item center">
+              <div class="col s4 forecast__subitem">
+                <h6>Morning</h6>
+                <img
+                  class="icon icon--forecast"
+                  src="img/icons/mostly-sunny.png"
+                  alt=""
+                />
+                <div>Mostly Sunny</div>
+                <p>77&#176; | 88&#176;</p>
+                <div class="blue-text text-darken-4">Rain Prob.</div>
+                <p>
+                  0%<i class="material-icons blue-text text-lighten-1"
+                    >opacity</i
+                  >
+                </p>
+              </div>
+              <div class="col s4 forecast__subitem center">
+                <h6>Afternoon</h6>
+                <img
+                  class="icon icon--forecast"
+                  src="img/icons/sunny.png"
+                  alt=""
+                />
+                <div>Rainy</div>
+                <p>79&#176; | 89&#176;</p>
+                <div class="blue-text text-darken-4">Rain Prob.</div>
+                <p>
+                  0%<i class="material-icons blue-text text-lighten-1"
+                    >opacity</i
+                  >
+                </p>
+              </div>
+              <div class="col s4 forecast__subitem center">
+                <h6>Evening</h6>
+                <img
+                  class="icon icon--forecast"
+                  src="img/icons/clear-sky-evening.png"
+                  alt=""
+                />
+                <div>Clear Sky</div>
+                <p>57&#176; | 67&#176;</p>
+                <div class="blue-text text-darken-4">Rain Prob.</div>
+                <p>
+                  0%<i class="material-icons blue-text text-lighten-1"
+                    >opacity</i
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Tabs Text: Friday -->
+          <div id="tab-5" class="col s12 grey lighten-3">
+            <h5 class="center">May 22</h5>
+            <div class="row forecast__item center">
+              <div class="col s4 forecast__subitem">
+                <h6>Morning</h6>
+                <img
+                  class="icon icon--forecast"
+                  src="img/icons/mostly-sunny.png"
+                  alt=""
+                />
+                <div>Cloudy</div>
+                <p>75&#176; | 85&#176;</p>
+                <div class="blue-text text-darken-4">Rain Prob.</div>
+                <p>
+                  10%<i class="material-icons blue-text text-lighten-1"
+                    >opacity</i
+                  >
+                </p>
+              </div>
+              <div class="col s4 forecast__subitem center">
+                <h6>Afternoon</h6>
+                <img
+                  class="icon icon--forecast"
+                  src="img/icons/cloudy.png"
+                  alt=""
+                />
+                <div>Mostly Cloudy</div>
+                <p>77&#176; | 83&#176;</p>
+                <div class="blue-text text-darken-4">Rain Prob.</div>
+                <p>
+                  30%<i class="material-icons blue-text text-lighten-1"
+                    >opacity</i
+                  >
+                </p>
+              </div>
+              <div class="col s4 forecast__subitem center">
+                <h6>Evening</h6>
+                <img
+                  class="icon icon--forecast"
+                  src="img/icons/rainy-evening.png"
+                  alt=""
+                />
+                <div>Isolated Thunderstorms</div>
+                <p>54&#176; | 61&#176;</p>
+                <div class="blue-text text-darken-4">Rain Prob.</div>
+                <p>
+                  40%<i class="material-icons blue-text text-lighten-1"
+                    >opacity</i
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Tabs Text: Saturday -->
+          <div id="tab-6" class="col s12 grey lighten-3">
+            <h5 class="center">May 23</h5>
+            <div class="row forecast__item center">
+              <div class="col s4 forecast__subitem">
+                <h6>Morning</h6>
+                <img
+                  class="icon icon--forecast"
+                  src="img/icons/rainy.png"
+                  alt=""
+                />
+                <div>Isolated Thunderstorms</div>
+                <p>71&#176; | 81&#176;</p>
+                <div class="blue-text text-darken-4">Rain Prob.</div>
+                <p>
+                  30%<i class="material-icons blue-text text-lighten-1"
+                    >opacity</i
+                  >
+                </p>
+              </div>
+              <div class="col s4 forecast__subitem center">
+                <h6>Afternoon</h6>
+                <img
+                  class="icon icon--forecast"
+                  src="img/icons/mostly-sunny.png"
+                  alt=""
+                />
+                <div>Mostly Sunny</div>
+                <p>78&#176; | 83&#176;</p>
+                <div class="blue-text text-darken-4">Rain Prob.</div>
+                <p>
+                  10%<i class="material-icons blue-text text-lighten-1"
+                    >opacity</i
+                  >
+                </p>
+              </div>
+              <div class="col s4 forecast__subitem center">
+                <h6>Evening</h6>
+                <img
+                  class="icon icon--forecast"
+                  src="img/icons/cloudy-evening.png"
+                  alt=""
+                />
+                <div>Partly Cloudy</div>
+                <p>52&#176; | 63&#176;</p>
+                <div class="blue-text text-darken-4">Rain Prob.</div>
+                <p>
+                  30%<i class="material-icons blue-text text-lighten-1"
+                    >opacity</i
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Tabs Text: Sunday -->
+          <div id="tab-7" class="col s12 grey lighten-3">
+            <h5 class="center">May 24</h5>
+            <div class="row forecast__item center">
+              <div class="col s4 forecast__subitem">
+                <h6>Morning</h6>
+                <img
+                  class="icon icon--forecast"
+                  src="img/icons/sunny.png"
+                  alt=""
+                />
+                <div>Sunny</div>
+                <p>75&#176; | 85&#176;</p>
+                <div class="blue-text text-darken-4">Rain Prob.</div>
+                <p>
+                  0%<i class="material-icons blue-text text-lighten-1"
+                    >opacity</i
+                  >
+                </p>
+              </div>
+              <div class="col s4 forecast__subitem center">
+                <h6>Afternoon</h6>
+                <img
+                  class="icon icon--forecast"
+                  src="img/icons/mostly-sunny.png"
+                  alt=""
+                />
+                <div>Mostly Sunny</div>
+                <p>79&#176; | 87&#176;</p>
+                <div class="blue-text text-darken-4">Rain Prob.</div>
+                <p>
+                  0%<i class="material-icons blue-text text-lighten-1"
+                    >opacity</i
+                  >
+                </p>
+              </div>
+              <div class="col s4 forecast__subitem center">
+                <h6>Evening</h6>
+                <img
+                  class="icon icon--forecast"
+                  src="img/icons/clear-sky-evening.png"
+                  alt=""
+                />
+                <div>Clear Sky</div>
+                <p>57&#176; | 66&#176;</p>
+                <div class="blue-text text-darken-4">Rain Prob.</div>
+                <p>
+                  0%<i class="material-icons blue-text text-lighten-1"
+                    >opacity</i
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Card News on side-->
+        <div class="card--news col l4 white darken-4 hide-on-med-and-down">
+          <div class="card">
+            <div class="card-content">
+              <div class="card-image">
+                <img src="img/news/home-img1.jpg" alt="" />
+              </div>
+              <div class="card-title">First Storm of the Season in Florida</div>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptatem alias, nobis explicabo provident nulla quam maxime ad
+                consequuntur ea adipisci.
+              </p>
+            </div>
+            <!-- Links to card -->
+            <div class="card-action">
+              <a class="card__button green-text text-darken-2" href="#"
+                >Read More
+                <i class="card__icon material-icons">chevron_right</i></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Hourly Forecast -->
+    <section class="section section__hourly">
+      <div class="row section__container">
+        <div class="hourly-content col s12 l8 grey lighten-3">
+          <h5 class="forecast__title green-text text-darken-2">
+            Next 24 Hours
+            <i class="material-icons left">access_time</i>
+            <span class="grey-text text-darken-1 right">Houston, Texas</span>
+          </h5>
+          <div class="hourly__day green darken-2 yellow-text text-darken-1">
+            <div class="yellow-text text-darken-1 right">7:15 AM CDT</div>
+            Monday May 18
+          </div>
+          <!-- Tabs: Table | Graph -->
+          <ul class="tabs hide-on-med-and-down">
+            <li class="tab col s4">
+              <a href="#table" class="table-tab green-text text-darken-2"
+                >Data</a
+              >
+            </li>
+            <li class="tab col s4">
+              <a href="#graph" class="green-text text-darken-2">Graph</a>
+            </li>
+          </ul>
+
+          <!-- Collapsible  -->
+          <ul
+            id="table"
+            class="collapsible green lighten-5"
+            data-collapsible="expandable"
+          >
+            <!-- Collapsible Item 1 -->
+            <li>
+              <div class="collapsible-header valign-wrapper">
+                <div class="col s3 m2">
+                  <span>8:00 AM</span>
+                </div>
+                <div class="col s2 m1 valign-wrapper">
+                  <img
+                    class="collapsible__image responsive-img"
+                    src="img/icons/cloudy.png"
+                    alt=""
+                  />
+                </div>
+                <div class="col m2 left-align hide-on-small-only">
+                  <span>Cloudy</span>
+                </div>
+                <div class="col s2 m2 center-align">
+                  <span>87&#176;</span>
+                </div>
+                <div class="col s4 m2 center-align">
+                  <span>Precip. 20%</span>
+                </div>
+                <div class="col m2 center-align hide-on-small-only">
+                  <span>Humid. 60%</span>
+                </div>
+                <div class="col s1 m1">
+                  <i
+                    class="material-icons collapsible__icon green-text text-darken-2"
+                    >expand_more</i
+                  >
+                </div>
+              </div>
+              <div class="collapsible-body">
+                <div class="row">
+                  <ul class="col s6 m4 offset-m1">
+                    <li class="show-on-small hide-on-med-and-up">Cloudy</li>
+                    <li>Feels: 85&#176;</li>
+                    <li>
+                      Wind: 7mph SW
+                      <i class="material-icons wind-icon wind-southwest"
+                        >keyboard_backspace</i
+                      >
+                    </li>
+                    <li>Dew Point: 16&#176;</li>
+                    <li>Rain: 0.5 in</li>
+                  </ul>
+                  <ul class="col s6 m4">
+                    <li class="show-on-small hide-on-med-and-up">
+                      Humidity: 60%
+                    </li>
+                    <li>Pressure: 29.9 in</li>
+                    <li>Visibility: 10 miles</li>
+                    <li>Cloud Cover: 20%</li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <!-- Collapsible Item 2 -->
+            <li>
+              <div class="collapsible-header valign-wrapper">
+                <div class="col s3 m2">
+                  <span>9:00 AM</span>
+                </div>
+                <div class="col s2 m1 valign-wrapper">
+                  <img
+                    class="collapsible__image responsive-img"
+                    src="img/icons/cloudy.png"
+                    alt=""
+                  />
+                </div>
+                <div class="col m2 left-align hide-on-small-only">
+                  <span>Cloudy</span>
+                </div>
+                <div class="col s2 m2 center-align">
+                  <span>88&#176;</span>
+                </div>
+                <div class="col s4 m2 center-align">
+                  <span>Precip. 25%</span>
+                </div>
+                <div class="col m2 center-align hide-on-small-only">
+                  <span>Humid. 62%</span>
+                </div>
+                <div class="col s1 m1">
+                  <i
+                    class="material-icons collapsible__icon green-text text-darken-2"
+                    >expand_more</i
+                  >
+                </div>
+              </div>
+              <div class="collapsible-body">
+                <div class="row">
+                  <ul class="col s6 m4 offset-m1">
+                    <li class="show-on-small hide-on-med-and-up">Cloudy</li>
+                    <li>Feels: 89&#176;</li>
+                    <li>
+                      Wind: 8mph SW
+                      <i class="material-icons wind-icon wind-southwest"
+                        >keyboard_backspace</i
+                      >
+                    </li>
+                    <li>Dew Point: 16&#176;</li>
+                    <li>Rain: 0.7 in</li>
+                  </ul>
+                  <ul class="col s6 m4">
+                    <li class="show-on-small hide-on-med-and-up">
+                      Humidity: 62%
+                    </li>
+                    <li>Pressure: 29.1 in</li>
+                    <li>Visibility: 9 miles</li>
+                    <li>Cloud Cover: 40%</li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <!-- Collapsible Item 3 -->
+            <li>
+              <div class="collapsible-header valign-wrapper">
+                <div class="col s3 m2">
+                  <span>10:00 AM</span>
+                </div>
+                <div class="col s2 m1 valign-wrapper">
+                  <img
+                    class="collapsible__image responsive-img"
+                    src="img/icons/cloudy.png"
+                    alt=""
+                  />
+                </div>
+                <div class="col m2 left-align hide-on-small-only">
+                  <span>Cloudy</span>
+                </div>
+                <div class="col s2 m2 center-align">
+                  <span>85&#176;</span>
+                </div>
+                <div class="col s4 m2 center-align">
+                  <span>Precip. 40%</span>
+                </div>
+                <div class="col m2 center-align hide-on-small-only">
+                  <span>Humid. 70%</span>
+                </div>
+                <div class="col s1 m1">
+                  <i
+                    class="material-icons collapsible__icon green-text text-darken-2"
+                    >expand_more</i
+                  >
+                </div>
+              </div>
+              <div class="collapsible-body">
+                <div class="row">
+                  <ul class="col s6 m4 offset-m1">
+                    <li class="show-on-small hide-on-med-and-up">Cloudy</li>
+                    <li>Feels: 85&#176;</li>
+                    <li>
+                      Wind: 10mph SW
+                      <i class="material-icons wind-icon wind-southwest"
+                        >keyboard_backspace</i
+                      >
+                    </li>
+                    <li>Dew Point: 16&#176;</li>
+                    <li>Rain: 0.9 in</li>
+                  </ul>
+                  <ul class="col s6 m4">
+                    <li class="show-on-small hide-on-med-and-up">
+                      Humidity: 70%
+                    </li>
+                    <li>Pressure: 31.5 in</li>
+                    <li>Visibility: 9 miles</li>
+                    <li>Cloud Cover: 60%</li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <!-- Collapsible Item 4 -->
+            <li>
+              <div class="collapsible-header valign-wrapper">
+                <div class="col s3 m2">
+                  <span>11:00 AM</span>
+                </div>
+                <div class="col s2 m1 valign-wrapper">
+                  <img
+                    class="collapsible__image responsive-img"
+                    src="img/icons/cloudy.png"
+                    alt=""
+                  />
+                </div>
+                <div class="col m2 left-align hide-on-small-only">
+                  <span>Mostly Cloudy</span>
+                </div>
+                <div class="col s2 m2 center-align">
+                  <span>84&#176;</span>
+                </div>
+                <div class="col s4 m2 center-align">
+                  <span>Precip. 50%</span>
+                </div>
+                <div class="col m2 center-align hide-on-small-only">
+                  <span>Humid. 75%</span>
+                </div>
+                <div class="col s1 m1">
+                  <i
+                    class="material-icons collapsible__icon green-text text-darken-2"
+                    >expand_more</i
+                  >
+                </div>
+              </div>
+              <div class="collapsible-body">
+                <div class="row">
+                  <ul class="col s6 m4 offset-m1">
+                    <li class="show-on-small hide-on-med-and-up">
+                      Mostly Cloudy
+                    </li>
+                    <li>Feels: 85&#176;</li>
+                    <li>
+                      Wind: 12mph SW
+                      <i class="material-icons wind-icon wind-southwest"
+                        >keyboard_backspace</i
+                      >
+                    </li>
+                    <li>Dew Point: 17&#176;</li>
+                    <li>Rain: 1.1 in</li>
+                  </ul>
+                  <ul class="col s6 m4">
+                    <li class="show-on-small hide-on-med-and-up">
+                      Humidity: 75%
+                    </li>
+                    <li>Pressure: 31.8 in</li>
+                    <li>Visibility: 8 miles</li>
+                    <li>Cloud Cover: 80%</li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <!-- Collapsible Item 5 -->
+            <li>
+              <div class="collapsible-header valign-wrapper">
+                <div class="col s3 m2">
+                  <span>12:00 PM</span>
+                </div>
+                <div class="col s2 m1 valign-wrapper">
+                  <img
+                    class="collapsible__image responsive-img"
+                    src="img/icons/rainy.png"
+                    alt=""
+                  />
+                </div>
+                <div class="col m2 left-align hide-on-small-only">
+                  <span>Scattered Thunderstorms</span>
+                </div>
+                <div class="col s2 m2 center-align">
+                  <span>82&#176;</span>
+                </div>
+                <div class="col s4 m2 center-align">
+                  <span>Precip. 60%</span>
+                </div>
+                <div class="col m2 center-align hide-on-small-only">
+                  <span>Humid. 77%</span>
+                </div>
+                <div class="col s1 m1">
+                  <i
+                    class="material-icons collapsible__icon green-text text-darken-2"
+                    >expand_more</i
+                  >
+                </div>
+              </div>
+              <div class="collapsible-body">
+                <div class="row">
+                  <ul class="col s6 m4 offset-m1">
+                    <li class="show-on-small hide-on-med-and-up">
+                      Scattered Thunderstorms
+                    </li>
+                    <li>Feels: 85&#176;</li>
+                    <li>
+                      Wind: 12mph SW
+                      <i class="material-icons wind-icon wind-southwest"
+                        >keyboard_backspace</i
+                      >
+                    </li>
+                    <li>Dew Point: 17&#176;</li>
+                    <li>Rain: 1.3 in</li>
+                  </ul>
+                  <ul class="col s6 m4">
+                    <li class="show-on-small hide-on-med-and-up">
+                      Humidity: 77%
+                    </li>
+                    <li>Pressure: 31.9 in</li>
+                    <li>Visibility: 7 miles</li>
+                    <li>Cloud Cover: 90%</li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <!-- Collapsible Item 6 -->
+            <li>
+              <div class="collapsible-header valign-wrapper">
+                <div class="col s3 m2">
+                  <span>1:00 PM</span>
+                </div>
+                <div class="col s2 m1 valign-wrapper">
+                  <img
+                    class="collapsible__image responsive-img"
+                    src="img/icons/rainy.png"
+                    alt=""
+                  />
+                </div>
+                <div class="col m2 left-align hide-on-small-only">
+                  <span>Thunderstorms</span>
+                </div>
+                <div class="col s2 m2 center-align">
+                  <span>80&#176;</span>
+                </div>
+                <div class="col s4 m2 center-align">
+                  <span>Precip. 70%</span>
+                </div>
+                <div class="col m2 center-align hide-on-small-only">
+                  <span>Humid. 78%</span>
+                </div>
+                <div class="col s1 m1">
+                  <i
+                    class="material-icons collapsible__icon green-text text-darken-2"
+                    >expand_more</i
+                  >
+                </div>
+              </div>
+              <div class="collapsible-body">
+                <div class="row">
+                  <ul class="col s6 m4 offset-m1">
+                    <li class="show-on-small hide-on-med-and-up">
+                      Thunderstorms
+                    </li>
+                    <li>Feels: 85&#176;</li>
+                    <li>
+                      Wind: 14mph W
+                      <i class="material-icons wind-icon wind-west"
+                        >keyboard_backspace</i
+                      >
+                    </li>
+                    <li>Dew Point: 18&#176;</li>
+                    <li>Rain: 1.5 in</li>
+                  </ul>
+                  <ul class="col s6 m4">
+                    <li class="show-on-small hide-on-med-and-up">
+                      Humidity: 78%
+                    </li>
+                    <li>Pressure: 31.9 in</li>
+                    <li>Visibility: 6 miles</li>
+                    <li>Cloud Cover: 100%</li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <!-- Collapsible Item 7 -->
+            <li>
+              <div class="collapsible-header valign-wrapper">
+                <div class="col s3 m2">
+                  <span>2:00 PM</span>
+                </div>
+                <div class="col s2 m1 valign-wrapper">
+                  <img
+                    class="collapsible__image responsive-img"
+                    src="img/icons/rainy.png"
+                    alt=""
+                  />
+                </div>
+                <div class="col m2 left-align hide-on-small-only">
+                  <span>Thunderstorms</span>
+                </div>
+                <div class="col s2 m2 center-align">
+                  <span>80&#176;</span>
+                </div>
+                <div class="col s4 m2 center-align">
+                  <span>Precip. 80%</span>
+                </div>
+                <div class="col m2 center-align hide-on-small-only">
+                  <span>Humid. 80%</span>
+                </div>
+                <div class="col s1 m1">
+                  <i
+                    class="material-icons collapsible__icon green-text text-darken-2"
+                    >expand_more</i
+                  >
+                </div>
+              </div>
+              <div class="collapsible-body">
+                <div class="row">
+                  <ul class="col s6 m4 offset-m1">
+                    <li class="show-on-small hide-on-med-and-up">
+                      Thunderstorms
+                    </li>
+                    <li>Feels: 85&#176;</li>
+                    <li>
+                      Wind: 14mph W
+                      <i class="material-icons wind-icon wind-west"
+                        >keyboard_backspace</i
+                      >
+                    </li>
+                    <li>Dew Point: 18&#176;</li>
+                    <li>Rain: 1.7 in</li>
+                  </ul>
+                  <ul class="col s6 m4">
+                    <li class="show-on-small hide-on-med-and-up">
+                      Humidity: 80%
+                    </li>
+                    <li>Pressure: 32.5 in</li>
+                    <li>Visibility: 6 miles</li>
+                    <li>Cloud Cover: 100%</li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <!-- Collapsible Item 8 -->
+            <li>
+              <div class="collapsible-header valign-wrapper">
+                <div class="col s3 m2">
+                  <span>3:00 PM</span>
+                </div>
+                <div class="col s2 m1 valign-wrapper">
+                  <img
+                    class="collapsible__image responsive-img"
+                    src="img/icons/thunderstorm.png"
+                    alt=""
+                  />
+                </div>
+                <div class="col m2 left-align hide-on-small-only">
+                  <span>Thunderstorms</span>
+                </div>
+                <div class="col s2 m2 center-align">
+                  <span>78&#176;</span>
+                </div>
+                <div class="col s4 m2 center-align">
+                  <span>Precip. 90%</span>
+                </div>
+                <div class="col m2 center-align hide-on-small-only">
+                  <span>Humid. 82%</span>
+                </div>
+                <div class="col s1 m1">
+                  <i
+                    class="material-icons collapsible__icon green-text text-darken-2"
+                    >expand_more</i
+                  >
+                </div>
+              </div>
+              <div class="collapsible-body">
+                <div class="row">
+                  <ul class="col s6 m4 offset-m1">
+                    <li class="show-on-small hide-on-med-and-up">
+                      Thunderstorms
+                    </li>
+                    <li>Feels: 80&#176;</li>
+                    <li>
+                      Wind: 16mph W
+                      <i class="material-icons wind-icon wind-west"
+                        >keyboard_backspace</i
+                      >
+                    </li>
+                    <li>Dew Point: 17&#176;</li>
+                    <li>Rain: 2.0 in</li>
+                  </ul>
+                  <ul class="col s6 m4">
+                    <li class="show-on-small hide-on-med-and-up">
+                      Humidity: 82%
+                    </li>
+                    <li>Pressure: 33.5 in</li>
+                    <li>Visibility: 4 miles</li>
+                    <li>Cloud Cover: 100%</li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <!-- Collapsible Item 9 -->
+            <li>
+              <div class="collapsible-header valign-wrapper">
+                <div class="col s3 m2">
+                  <span>4:00 PM</span>
+                </div>
+                <div class="col s2 m1 valign-wrapper">
+                  <img
+                    class="collapsible__image responsive-img"
+                    src="img/icons/thunderstorm.png"
+                    alt=""
+                  />
+                </div>
+                <div class="col m2 left-align hide-on-small-only">
+                  <span>Thunderstorms</span>
+                </div>
+                <div class="col s2 m2 center-align">
+                  <span>76&#176;</span>
+                </div>
+                <div class="col s4 m2 center-align">
+                  <span>Precip. 90%</span>
+                </div>
+                <div class="col m2 center-align hide-on-small-only">
+                  <span>Humid. 80%</span>
+                </div>
+                <div class="col s1 m1">
+                  <i
+                    class="material-icons collapsible__icon green-text text-darken-2"
+                    >expand_more</i
+                  >
+                </div>
+              </div>
+              <div class="collapsible-body">
+                <div class="row">
+                  <ul class="col s6 m4 offset-m1">
+                    <li class="show-on-small hide-on-med-and-up">
+                      Thunderstorms
+                    </li>
+                    <li>Feels: 78&#176;</li>
+                    <li>
+                      Wind: 18mph W
+                      <i class="material-icons wind-icon wind-west"
+                        >keyboard_backspace</i
+                      >
+                    </li>
+                    <li>Dew Point: 17&#176;</li>
+                    <li>Rain: 2.2 in</li>
+                  </ul>
+                  <ul class="col s6 m4">
+                    <li class="show-on-small hide-on-med-and-up">
+                      Humidity: 80%
+                    </li>
+                    <li>Pressure: 33.5 in</li>
+                    <li>Visibility: 4 miles</li>
+                    <li>Cloud Cover: 100%</li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <!-- Collapsible Item 10 -->
+            <li>
+              <div class="collapsible-header valign-wrapper">
+                <div class="col s3 m2">
+                  <span>5:00 PM</span>
+                </div>
+                <div class="col s2 m1 valign-wrapper">
+                  <img
+                    class="collapsible__image responsive-img"
+                    src="img/icons/rainy.png"
+                    alt=""
+                  />
+                </div>
+                <div class="col m2 left-align hide-on-small-only">
+                  <span>Thunderstorms</span>
+                </div>
+                <div class="col s2 m2 center-align">
+                  <span>76&#176;</span>
+                </div>
+                <div class="col s4 m2 center-align">
+                  <span>Precip. 70%</span>
+                </div>
+                <div class="col m2 center-align hide-on-small-only">
+                  <span>Humid. 70%</span>
+                </div>
+                <div class="col s1 m1">
+                  <i
+                    class="material-icons collapsible__icon green-text text-darken-2"
+                    >expand_more</i
+                  >
+                </div>
+              </div>
+              <div class="collapsible-body">
+                <div class="row">
+                  <ul class="col s6 m4 offset-m1">
+                    <li class="show-on-small hide-on-med-and-up">
+                      Thunderstorms
+                    </li>
+                    <li>Feels: 78&#176;</li>
+                    <li>
+                      Wind: 15mph SW
+                      <i class="material-icons wind-icon wind-southwest"
+                        >keyboard_backspace</i
+                      >
+                    </li>
+                    <li>Dew Point: 16&#176;</li>
+                    <li>Rain: 2.2 in</li>
+                  </ul>
+                  <ul class="col s6 m4">
+                    <li class="show-on-small hide-on-med-and-up">
+                      Humidity: 80%
+                    </li>
+                    <li>Pressure: 32.5 in</li>
+                    <li>Visibility: 5 miles</li>
+                    <li>Cloud Cover: 100%</li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <!-- Collapsible Item 11 -->
+            <li>
+              <div class="collapsible-header valign-wrapper">
+                <div class="col s3 m2">
+                  <span>6:00 PM</span>
+                </div>
+                <div class="col s2 m1 valign-wrapper">
+                  <img
+                    class="collapsible__image responsive-img"
+                    src="img/icons/rainy.png"
+                    alt=""
+                  />
+                </div>
+                <div class="col m2 left-align hide-on-small-only">
+                  <span>Isolated Thunderstorms</span>
+                </div>
+                <div class="col s2 m2 center-align">
+                  <span>74&#176;</span>
+                </div>
+                <div class="col s4 m2 center-align">
+                  <span>Precip. 50%</span>
+                </div>
+                <div class="col m2 center-align hide-on-small-only">
+                  <span>Humid. 60%</span>
+                </div>
+                <div class="col s1 m1">
+                  <i
+                    class="material-icons collapsible__icon green-text text-darken-2"
+                    >expand_more</i
+                  >
+                </div>
+              </div>
+              <div class="collapsible-body">
+                <div class="row">
+                  <ul class="col s6 m4 offset-m1">
+                    <li class="show-on-small hide-on-med-and-up">
+                      Isolated Thunderstorms
+                    </li>
+                    <li>Feels: 77&#176;</li>
+                    <li>
+                      Wind: 13mph SW
+                      <i class="material-icons wind-icon wind-southwest"
+                        >keyboard_backspace</i
+                      >
+                    </li>
+                    <li>Dew Point: 15&#176;</li>
+                    <li>Rain: 1.5 in</li>
+                  </ul>
+                  <ul class="col s6 m4">
+                    <li class="show-on-small hide-on-med-and-up">
+                      Humidity: 60%
+                    </li>
+                    <li>Pressure: 32.5 in</li>
+                    <li>Visibility: 6 miles</li>
+                    <li>Cloud Cover: 90%</li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <!-- Collapsible Item 12 -->
+            <li>
+              <div class="collapsible-header valign-wrapper">
+                <div class="col s3 m2">
+                  <span>7:00 PM</span>
+                </div>
+                <div class="col s2 m1 valign-wrapper">
+                  <img
+                    class="collapsible__image responsive-img"
+                    src="img/icons/cloudy.png"
+                    alt=""
+                  />
+                </div>
+                <div class="col m2 left-align hide-on-small-only">
+                  <span>Mostly Cloudy</span>
+                </div>
+                <div class="col s2 m2 center-align">
+                  <span>71&#176;</span>
+                </div>
+                <div class="col s4 m2 center-align">
+                  <span>Precip. 30%</span>
+                </div>
+                <div class="col m2 center-align hide-on-small-only">
+                  <span>Humid. 55%</span>
+                </div>
+                <div class="col s1 m1">
+                  <i
+                    class="material-icons collapsible__icon green-text text-darken-2"
+                    >expand_more</i
+                  >
+                </div>
+              </div>
+              <div class="collapsible-body">
+                <div class="row">
+                  <ul class="col s6 m4 offset-m1">
+                    <li class="show-on-small hide-on-med-and-up">
+                      Mostly Cloudy
+                    </li>
+                    <li>Feels: 73&#176;</li>
+                    <li>
+                      Wind: 11mph SW
+                      <i class="material-icons wind-icon wind-southwest"
+                        >keyboard_backspace</i
+                      >
+                    </li>
+                    <li>Dew Point: 15&#176;</li>
+                    <li>Rain: 1.0 in</li>
+                  </ul>
+                  <ul class="col s6 m4">
+                    <li class="show-on-small hide-on-med-and-up">
+                      Humidity: 55%
+                    </li>
+                    <li>Pressure: 30.5 in</li>
+                    <li>Visibility: 6 miles</li>
+                    <li>Cloud Cover: 70%</li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <!-- Collapsible Item 13 -->
+            <li>
+              <div class="collapsible-header valign-wrapper">
+                <div class="col s3 m2">
+                  <span>8:00 PM</span>
+                </div>
+                <div class="col s2 m1 valign-wrapper">
+                  <img
+                    class="collapsible__image responsive-img"
+                    src="img/icons/cloudy-evening.png"
+                    alt=""
+                  />
+                </div>
+                <div class="col m2 left-align hide-on-small-only">
+                  <span>Cloudy</span>
+                </div>
+                <div class="col s2 m2 center-align">
+                  <span>67&#176;</span>
+                </div>
+                <div class="col s4 m2 center-align">
+                  <span>Precip. 10%</span>
+                </div>
+                <div class="col m2 center-align hide-on-small-only">
+                  <span>Humid. 48%</span>
+                </div>
+                <div class="col s1 m1">
+                  <i
+                    class="material-icons collapsible__icon green-text text-darken-2"
+                    >expand_more</i
+                  >
+                </div>
+              </div>
+              <div class="collapsible-body">
+                <div class="row">
+                  <ul class="col s6 m4 offset-m1">
+                    <li class="show-on-small hide-on-med-and-up">
+                      Mostly Cloudy
+                    </li>
+                    <li>Feels: 68&#176;</li>
+                    <li>
+                      Wind: 9mph SW
+                      <i class="material-icons wind-icon wind-southwest"
+                        >keyboard_backspace</i
+                      >
+                    </li>
+                    <li>Dew Point: 14&#176;</li>
+                    <li>Rain: 0.8 in</li>
+                  </ul>
+                  <ul class="col s6 m4">
+                    <li class="show-on-small hide-on-med-and-up">
+                      Humidity: 48%
+                    </li>
+                    <li>Pressure: 30.1 in</li>
+                    <li>Visibility: 5 miles</li>
+                    <li>Cloud Cover: 50%</li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <!-- Next Hours -->
+            <li>
+              <div class="collapsible-header valign-wrapper">
+                <div class="col s12 center">
+                  <div class="collapsible__title green-text text-darken-2">
+                    Next 12 Hours
+                  </div>
+                </div>
+              </div>
+              <div class="collapsible-body collapsible__group">
+                <ul class="collapsible" data-collapsible="expandable">
+                  <!-- Collapsible Item 14 -->
+                  <li>
+                    <div class="collapsible-header valign-wrapper">
+                      <div class="col s3 m2">
+                        <span>9:00 PM</span>
+                      </div>
+                      <div class="col s2 m1 valign-wrapper">
+                        <img
+                          class="collapsible__image responsive-img"
+                          src="img/icons/cloudy-evening.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="col m2 left-align hide-on-small-only">
+                        <span>Cloudy</span>
+                      </div>
+                      <div class="col s2 m2 center-align">
+                        <span>65&#176;</span>
+                      </div>
+                      <div class="col s4 m2 center-align">
+                        <span>Precip. 0%</span>
+                      </div>
+                      <div class="col m2 center-align hide-on-small-only">
+                        <span>Humid. 35%</span>
+                      </div>
+                      <div class="col s1 m1">
+                        <i
+                          class="material-icons collapsible__icon green-text text-darken-2"
+                          >expand_more</i
+                        >
+                      </div>
+                    </div>
+                    <div class="collapsible-body">
+                      <div class="row">
+                        <ul class="col s6 m4 offset-m1">
+                          <li class="show-on-small hide-on-med-and-up">
+                            Cloudy
+                          </li>
+                          <li>Feels: 68&#176;</li>
+                          <li>
+                            Wind: 7mph SW
+                            <i class="material-icons wind-icon wind-southwest"
+                              >keyboard_backspace</i
+                            >
+                          </li>
+                          <li>Dew Point: 13&#176;</li>
+                          <li>Rain: 0.3 in</li>
+                        </ul>
+                        <ul class="col s6 m4">
+                          <li class="show-on-small hide-on-med-and-up">
+                            Humidity: 35%
+                          </li>
+                          <li>Pressure: 29.8 in</li>
+                          <li>Visibility: 6 miles</li>
+                          <li>Cloud Cover: 30%</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <!-- Collapsible Item 15 -->
+                  <li>
+                    <div class="collapsible-header valign-wrapper">
+                      <div class="col s3 m2">
+                        <span>10:00 PM</span>
+                      </div>
+                      <div class="col s2 m1 valign-wrapper">
+                        <img
+                          class="collapsible__image responsive-img"
+                          src="img/icons/cloudy-evening.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="col m2 left-align hide-on-small-only">
+                        <span>Cloudy</span>
+                      </div>
+                      <div class="col s2 m2 center-align">
+                        <span>61&#176;</span>
+                      </div>
+                      <div class="col s4 m2 center-align">
+                        <span>Precip. 0%</span>
+                      </div>
+                      <div class="col m2 center-align hide-on-small-only">
+                        <span>Humid. 32%</span>
+                      </div>
+                      <div class="col s1 m1">
+                        <i
+                          class="material-icons collapsible__icon green-text text-darken-2"
+                          >expand_more</i
+                        >
+                      </div>
+                    </div>
+                    <div class="collapsible-body">
+                      <div class="row">
+                        <ul class="col s6 m4 offset-m1">
+                          <li class="show-on-small hide-on-med-and-up">
+                            Cloudy
+                          </li>
+                          <li>Feels: 68&#176;</li>
+                          <li>
+                            Wind: 5mph SW
+                            <i class="material-icons wind-icon wind-southwest"
+                              >keyboard_backspace</i
+                            >
+                          </li>
+                          <li>Dew Point: 13&#176;</li>
+                          <li>Rain: 0.1 in</li>
+                        </ul>
+                        <ul class="col s6 m4">
+                          <li class="show-on-small hide-on-med-and-up">
+                            Humidity: 32%
+                          </li>
+                          <li>Pressure: 29.8 in</li>
+                          <li>Visibility: 5 miles</li>
+                          <li>Cloud Cover: 20%</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <!-- Collapsible Item 16 -->
+                  <li>
+                    <div class="collapsible-header valign-wrapper">
+                      <div class="col s3 m2">
+                        <span>11:00 PM</span>
+                      </div>
+                      <div class="col s2 m1 valign-wrapper">
+                        <img
+                          class="collapsible__image responsive-img"
+                          src="img/icons/clear-sky-evening.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="col m2 left-align hide-on-small-only">
+                        <span>Clear Sky</span>
+                      </div>
+                      <div class="col s2 m2 center-align">
+                        <span>61&#176;</span>
+                      </div>
+                      <div class="col s4 m2 center-align">
+                        <span>Precip. 0%</span>
+                      </div>
+                      <div class="col m2 center-align hide-on-small-only">
+                        <span>Humid. 30%</span>
+                      </div>
+                      <div class="col s1 m1">
+                        <i
+                          class="material-icons collapsible__icon green-text text-darken-2"
+                          >expand_more</i
+                        >
+                      </div>
+                    </div>
+                    <div class="collapsible-body">
+                      <div class="row">
+                        <ul class="col s6 m4 offset-m1">
+                          <li class="show-on-small hide-on-med-and-up">
+                            Clear Sky
+                          </li>
+                          <li>Feels: 63&#176;</li>
+                          <li>
+                            Wind: 4mph SW
+                            <i class="material-icons wind-icon wind-southwest"
+                              >keyboard_backspace</i
+                            >
+                          </li>
+                          <li>Dew Point: 13&#176;</li>
+                          <li>Rain: 0.1 in</li>
+                        </ul>
+                        <ul class="col s6 m4">
+                          <li class="show-on-small hide-on-med-and-up">
+                            Humidity: 30%
+                          </li>
+                          <li>Pressure: 29.2 in</li>
+                          <li>Visibility: 5 miles</li>
+                          <li>Cloud Cover: 0%</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <!-- Collapsible Item 17 -->
+                  <li>
+                    <div class="collapsible-header valign-wrapper">
+                      <div class="col s3 m2">
+                        <span>12:00 AM</span>
+                      </div>
+                      <div class="col s2 m1 valign-wrapper">
+                        <img
+                          class="collapsible__image responsive-img"
+                          src="img/icons/clear-sky-evening.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="col m2 left-align hide-on-small-only">
+                        <span>Clear Sky</span>
+                      </div>
+                      <div class="col s2 m2 center-align">
+                        <span>58&#176;</span>
+                      </div>
+                      <div class="col s4 m2 center-align">
+                        <span>Precip. 0%</span>
+                      </div>
+                      <div class="col m2 center-align hide-on-small-only">
+                        <span>Humid. 30%</span>
+                      </div>
+                      <div class="col s1 m1">
+                        <i
+                          class="material-icons collapsible__icon green-text text-darken-2"
+                          >expand_more</i
+                        >
+                      </div>
+                    </div>
+                    <div class="collapsible-body">
+                      <div class="row">
+                        <ul class="col s6 m4 offset-m1">
+                          <li class="show-on-small hide-on-med-and-up">
+                            Clear Sky
+                          </li>
+                          <li>Feels: 57&#176;</li>
+                          <li>
+                            Wind: 3mph SW
+                            <i class="material-icons wind-icon wind-southwest"
+                              >keyboard_backspace</i
+                            >
+                          </li>
+                          <li>Dew Point: 13&#176;</li>
+                          <li>Rain: 0.1 in</li>
+                        </ul>
+                        <ul class="col s6 m4">
+                          <li class="show-on-small hide-on-med-and-up">
+                            Humidity: 35%
+                          </li>
+                          <li>Pressure: 29.2 in</li>
+                          <li>Visibility: 5 miles</li>
+                          <li>Cloud Cover: 0%</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <!-- Next Day -->
+                  <div
+                    class="valign-wrapper green darken-2 yellow-text text-darken-1"
+                  >
+                    Tuesday May 19
+                  </div>
+                  <!-- Collapsible Item 18 -->
+                  <li>
+                    <div class="collapsible-header valign-wrapper">
+                      <div class="col s3 m2">
+                        <span>1:00 AM</span>
+                      </div>
+                      <div class="col s2 m1 valign-wrapper">
+                        <img
+                          class="collapsible__image responsive-img"
+                          src="img/icons/clear-sky-evening.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="col m2 left-align hide-on-small-only">
+                        <span>Clear Sky</span>
+                      </div>
+                      <div class="col s2 m2 center-align">
+                        <span>56&#176;</span>
+                      </div>
+                      <div class="col s4 m2 center-align">
+                        <span>Precip. 0%</span>
+                      </div>
+                      <div class="col m2 center-align hide-on-small-only">
+                        <span>Humid. 30%</span>
+                      </div>
+                      <div class="col s1 m1">
+                        <i
+                          class="material-icons collapsible__icon green-text text-darken-2"
+                          >expand_more</i
+                        >
+                      </div>
+                    </div>
+                    <div class="collapsible-body">
+                      <div class="row">
+                        <ul class="col s6 m4 offset-m1">
+                          <li class="show-on-small hide-on-med-and-up">
+                            Clear Sky
+                          </li>
+                          <li>Feels: 55&#176;</li>
+                          <li>
+                            Wind: 3mph SW
+                            <i class="material-icons wind-icon wind-southwest"
+                              >keyboard_backspace</i
+                            >
+                          </li>
+                          <li>Dew Point: 13&#176;</li>
+                          <li>Rain: 0.0 in</li>
+                        </ul>
+                        <ul class="col s6 m4">
+                          <li class="show-on-small hide-on-med-and-up">
+                            Humidity: 30%
+                          </li>
+                          <li>Pressure: 29.2 in</li>
+                          <li>Visibility: 7 miles</li>
+                          <li>Cloud Cover: 0%</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <!-- Collapsible Item 19 -->
+                  <li>
+                    <div class="collapsible-header valign-wrapper">
+                      <div class="col s3 m2">
+                        <span>2:00 AM</span>
+                      </div>
+                      <div class="col s2 m1 valign-wrapper">
+                        <img
+                          class="collapsible__image responsive-img"
+                          src="img/icons/clear-sky-evening.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="col m2 left-align hide-on-small-only">
+                        <span>Clear Sky</span>
+                      </div>
+                      <div class="col s2 m2 center-align">
+                        <span>54&#176;</span>
+                      </div>
+                      <div class="col s4 m2 center-align">
+                        <span>Precip. 0%</span>
+                      </div>
+                      <div class="col m2 center-align hide-on-small-only">
+                        <span>Humid. 35%</span>
+                      </div>
+                      <div class="col s1 m1">
+                        <i
+                          class="material-icons collapsible__icon green-text text-darken-2"
+                          >expand_more</i
+                        >
+                      </div>
+                    </div>
+                    <div class="collapsible-body">
+                      <div class="row">
+                        <ul class="col s6 m4 offset-m1">
+                          <li class="show-on-small hide-on-med-and-up">
+                            Clear Sky
+                          </li>
+                          <li>Feels: 53&#176;</li>
+                          <li>
+                            Wind: 3mph SW
+                            <i class="material-icons wind-icon wind-southwest"
+                              >keyboard_backspace</i
+                            >
+                          </li>
+                          <li>Dew Point: 13&#176;</li>
+                          <li>Rain: 0.0 in</li>
+                        </ul>
+                        <ul class="col s6 m4">
+                          <li class="show-on-small hide-on-med-and-up">
+                            Humidity: 35%
+                          </li>
+                          <li>Pressure: 29.1 in</li>
+                          <li>Visibility: 7 miles</li>
+                          <li>Cloud Cover: 0%</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <!-- Collapsible Item 20 -->
+                  <li>
+                    <div class="collapsible-header valign-wrapper">
+                      <div class="col s3 m2">
+                        <span>3:00 AM</span>
+                      </div>
+                      <div class="col s2 m1 valign-wrapper">
+                        <img
+                          class="collapsible__image responsive-img"
+                          src="img/icons/clear-sky-evening.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="col m2 left-align hide-on-small-only">
+                        <span>Mostly Clear</span>
+                      </div>
+                      <div class="col s2 m2 center-align">
+                        <span>51&#176;</span>
+                      </div>
+                      <div class="col s4 m2 center-align">
+                        <span>Precip. 0%</span>
+                      </div>
+                      <div class="col m2 center-align hide-on-small-only">
+                        <span>Humid. 38%</span>
+                      </div>
+                      <div class="col s1 m1">
+                        <i
+                          class="material-icons collapsible__icon green-text text-darken-2"
+                          >expand_more</i
+                        >
+                      </div>
+                    </div>
+                    <div class="collapsible-body">
+                      <div class="row">
+                        <ul class="col s6 m4 offset-m1">
+                          <li class="show-on-small hide-on-med-and-up">
+                            Mostly Clear
+                          </li>
+                          <li>Feels: 50&#176;</li>
+                          <li>
+                            Wind: 4mph SW
+                            <i class="material-icons wind-icon wind-southwest"
+                              >keyboard_backspace</i
+                            >
+                          </li>
+                          <li>Dew Point: 13&#176;</li>
+                          <li>Rain: 0.0 in</li>
+                        </ul>
+                        <ul class="col s6 m4">
+                          <li class="show-on-small hide-on-med-and-up">
+                            Humidity: 38%
+                          </li>
+                          <li>Pressure: 29.1 in</li>
+                          <li>Visibility: 6 miles</li>
+                          <li>Cloud Cover: 0%</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <!-- Collapsible Item 21 -->
+                  <li>
+                    <div class="collapsible-header valign-wrapper">
+                      <div class="col s3 m2">
+                        <span>4:00 AM</span>
+                      </div>
+                      <div class="col s2 m1 valign-wrapper">
+                        <img
+                          class="collapsible__image responsive-img"
+                          src="img/icons/cloudy-evening.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="col m2 left-align hide-on-small-only">
+                        <span>Partly Cloudy</span>
+                      </div>
+                      <div class="col s2 m2 center-align">
+                        <span>50&#176;</span>
+                      </div>
+                      <div class="col s4 m2 center-align">
+                        <span>Precip. 0%</span>
+                      </div>
+                      <div class="col m2 center-align hide-on-small-only">
+                        <span>Humid. 40%</span>
+                      </div>
+                      <div class="col s1 m1">
+                        <i
+                          class="material-icons collapsible__icon green-text text-darken-2"
+                          >expand_more</i
+                        >
+                      </div>
+                    </div>
+                    <div class="collapsible-body">
+                      <div class="row">
+                        <ul class="col s6 m4 offset-m1">
+                          <li class="show-on-small hide-on-med-and-up">
+                            Partly Cloudy
+                          </li>
+                          <li>Feels: 49&#176;</li>
+                          <li>
+                            Wind: 6mph SW
+                            <i class="material-icons wind-icon wind-southwest"
+                              >keyboard_backspace</i
+                            >
+                          </li>
+                          <li>Dew Point: 13&#176;</li>
+                          <li>Rain: 0.0 in</li>
+                        </ul>
+                        <ul class="col s6 m4">
+                          <li class="show-on-small hide-on-med-and-up">
+                            Humidity: 40%
+                          </li>
+                          <li>Pressure: 29.5 in</li>
+                          <li>Visibility: 5 miles</li>
+                          <li>Cloud Cover: 20%</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <!-- Collapsible Item 22 -->
+                  <li>
+                    <div class="collapsible-header valign-wrapper">
+                      <div class="col s3 m2">
+                        <span>5:00 AM</span>
+                      </div>
+                      <div class="col s2 m1 valign-wrapper">
+                        <img
+                          class="collapsible__image responsive-img"
+                          src="img/icons/cloudy-evening.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="col m2 left-align hide-on-small-only">
+                        <span>Cloudy</span>
+                      </div>
+                      <div class="col s2 m2 center-align">
+                        <span>48&#176;</span>
+                      </div>
+                      <div class="col s4 m2 center-align">
+                        <span>Precip. 0%</span>
+                      </div>
+                      <div class="col m2 center-align hide-on-small-only">
+                        <span>Humid. 44%</span>
+                      </div>
+                      <div class="col s1 m1">
+                        <i
+                          class="material-icons collapsible__icon green-text text-darken-2"
+                          >expand_more</i
+                        >
+                      </div>
+                    </div>
+                    <div class="collapsible-body">
+                      <div class="row">
+                        <ul class="col s6 m4 offset-m1">
+                          <li class="show-on-small hide-on-med-and-up">
+                            Partly Cloudy
+                          </li>
+                          <li>Feels: 47&#176;</li>
+                          <li>
+                            Wind: 7mph SW
+                            <i class="material-icons wind-icon wind-southwest"
+                              >keyboard_backspace</i
+                            >
+                          </li>
+                          <li>Dew Point: 13&#176;</li>
+                          <li>Rain: 0.0 in</li>
+                        </ul>
+                        <ul class="col s6 m4">
+                          <li class="show-on-small hide-on-med-and-up">
+                            Humidity: 44%
+                          </li>
+                          <li>Pressure: 29.9 in</li>
+                          <li>Visibility: 5 miles</li>
+                          <li>Cloud Cover: 50%</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <!-- Collapsible Item 23 -->
+                  <li>
+                    <div class="collapsible-header valign-wrapper">
+                      <div class="col s3 m2">
+                        <span>6:00 AM</span>
+                      </div>
+                      <div class="col s2 m1 valign-wrapper">
+                        <img
+                          class="collapsible__image responsive-img"
+                          src="img/icons/cloudy-evening.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="col m2 left-align hide-on-small-only">
+                        <span>Mostly Cloudy</span>
+                      </div>
+                      <div class="col s2 m2 center-align">
+                        <span>47&#176;</span>
+                      </div>
+                      <div class="col s4 m2 center-align">
+                        <span>Precip. 20%</span>
+                      </div>
+                      <div class="col m2 center-align hide-on-small-only">
+                        <span>Humid. 49%</span>
+                      </div>
+                      <div class="col s1 m1">
+                        <i
+                          class="material-icons collapsible__icon green-text text-darken-2"
+                          >expand_more</i
+                        >
+                      </div>
+                    </div>
+                    <div class="collapsible-body">
+                      <div class="row">
+                        <ul class="col s6 m4 offset-m1">
+                          <li class="show-on-small hide-on-med-and-up">
+                            Partly Cloudy
+                          </li>
+                          <li>Feels: 46&#176;</li>
+                          <li>
+                            Wind: 9mph SW
+                            <i class="material-icons wind-icon wind-southwest"
+                              >keyboard_backspace</i
+                            >
+                          </li>
+                          <li>Dew Point: 13&#176;</li>
+                          <li>Rain: 0.5 in</li>
+                        </ul>
+                        <ul class="col s6 m4">
+                          <li class="show-on-small hide-on-med-and-up">
+                            Humidity: 49%
+                          </li>
+                          <li>Pressure: 29.9 in</li>
+                          <li>Visibility: 5 miles</li>
+                          <li>Cloud Cover: 80%</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <!-- Collapsible Item 24 -->
+                  <li>
+                    <div class="collapsible-header valign-wrapper">
+                      <div class="col s3 m2">
+                        <span>7:00 AM</span>
+                      </div>
+                      <div class="col s2 m1 valign-wrapper">
+                        <img
+                          class="collapsible__image responsive-img"
+                          src="img/icons/cloudy.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="col m2 left-align hide-on-small-only">
+                        <span>Mostly Cloudy</span>
+                      </div>
+                      <div class="col s2 m2 center-align">
+                        <span>48&#176;</span>
+                      </div>
+                      <div class="col s4 m2 center-align">
+                        <span>Precip. 40%</span>
+                      </div>
+                      <div class="col m2 center-align hide-on-small-only">
+                        <span>Humid. 55%</span>
+                      </div>
+                      <div class="col s1 m1">
+                        <i
+                          class="material-icons collapsible__icon green-text text-darken-2"
+                          >expand_more</i
+                        >
+                      </div>
+                    </div>
+                    <div class="collapsible-body">
+                      <div class="row">
+                        <ul class="col s6 m4 offset-m1">
+                          <li class="show-on-small hide-on-med-and-up">
+                            Partly Cloudy
+                          </li>
+                          <li>Feels: 46&#176;</li>
+                          <li>
+                            Wind: 9mph SW
+                            <i class="material-icons wind-icon wind-southwest"
+                              >keyboard_backspace</i
+                            >
+                          </li>
+                          <li>Dew Point: 14&#176;</li>
+                          <li>Rain: 0.7 in</li>
+                        </ul>
+                        <ul class="col s6 m4">
+                          <li class="show-on-small hide-on-med-and-up">
+                            Humidity: 55%
+                          </li>
+                          <li>Pressure: 30.9 in</li>
+                          <li>Visibility: 6 miles</li>
+                          <li>Cloud Cover: 80%</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <div id="graph" class="col s12 card-panel hide-on-med-and-down">
+            <div
+              id="chartContainer"
+              style="height: 400px; width: 100%; position: relative;"
+            ></div>
+          </div>
+        </div>
+
+        <!-- Card News on side-->
+        <div
+          id="news-column"
+          class="card--news hourly-news col l4 hide-on-med-and-down"
+        >
+          <!-- Card News 1 -->
+          <div class="white darken-4 news__item">
+            <div class="card">
+              <div class="card-content">
+                <div class="card-image">
+                  <img src="img/news/home-img2.jpg" alt="" />
+                </div>
+                <div class="card-title">
+                  Phases of the Moon for 2020
+                </div>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptatem alias, nobis explicabo provident nulla quam maxime
+                  ad consequuntur ea adipisci.
+                </p>
+              </div>
+              <!-- Links to card -->
+              <div class="card-action">
+                <a class="card__button green-text text-darken-2" href="#"
+                  >Read More
+                  <i class="card__icon material-icons">chevron_right</i></a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Card News 2 -->
+          <div class="white darken-4 news__item">
+            <div class="card">
+              <div class="card-content">
+                <div class="card-image">
+                  <img src="img/news/home-img3.jpg" alt="" />
+                </div>
+                <div class="card-title">
+                  Tornadoes Damage In North Tennessee on Sunday
+                </div>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptatem alias, nobis explicabo provident nulla quam maxime
+                  ad consequuntur ea adipisci.
+                </p>
+              </div>
+              <!-- Links to card -->
+              <div class="card-action">
+                <a class="card__button green-text text-darken-2" href="#"
+                  >Read More
+                  <i class="card__icon material-icons">chevron_right</i></a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Card News 3 -->
+          <div class="white darken-4 news__item">
+            <div class="card">
+              <div class="card-content">
+                <div class="card-image">
+                  <img src="img/news/home-img4.jpg" alt="" />
+                </div>
+                <div class="card-title">
+                  Lunar and Solar eclipse in June: Europe and Asia
+                </div>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptatem alias, nobis explicabo provident nulla quam maxime
+                  ad consequuntur ea adipisci.
+                </p>
+              </div>
+              <!-- Links to card -->
+              <div class="card-action">
+                <a class="card__button green-text text-darken-2" href="#"
+                  >Read More
+                  <i class="card__icon material-icons">chevron_right</i></a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Card News 4 -->
+          <div class="white darken-4 news__item">
+            <div class="card">
+              <div class="card-content">
+                <div class="card-image">
+                  <img src="img/news/home-img5.jpg" alt="" />
+                </div>
+                <div class="card-title">
+                  Memorial Day Weekend: What Florida Beaches are Open
+                </div>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptatem alias, nobis explicabo provident nulla quam maxime
+                  ad consequuntur ea adipisci.
+                </p>
+              </div>
+              <!-- Links to card -->
+              <div class="card-action">
+                <a class="card__button green-text text-darken-2" href="#"
+                  >Read More
+                  <i class="card__icon material-icons">chevron_right</i></a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Card News 5 -->
+          <div class="white darken-4 news__item">
+            <div class="card">
+              <div class="card-content">
+                <div class="card-image">
+                  <img src="img/news/home-img6.jpg" alt="" />
+                </div>
+                <div class="card-title">
+                  Blizzard Conditions in North Dakota
+                </div>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptatem alias, nobis explicabo provident nulla quam maxime
+                  ad consequuntur ea adipisci.
+                </p>
+              </div>
+              <!-- Links to card -->
+              <div class="card-action">
+                <a class="card__button green-text text-darken-2" href="#"
+                  >Read More
+                  <i class="card__icon material-icons">chevron_right</i></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Climate Indexes -->
+    <section class="section section__indexes">
+      <div class="row">
+        <div class="card-index col s6 m4 l3">
+          <div class="card-panel center z-depth-5">
+            <svg>
+              <circle cx="55" cy="55" r="50"></circle>
+              <circle cx="55" cy="55" r="50"></circle>
+            </svg>
+            <i
+              class="index__icon material-icons light-green-text text-accent-3 medium"
+              >spa</i
+            >
+            <p class="index__number">25</p>
+            <h6 class="index__title green-text text-darken-3">Air Quality</h6>
+            <span
+              class="index__badge new badge light-green accent-3 green-text text-darken-4"
+              data-badge-caption=""
+              >Fair</span
+            >
+          </div>
+        </div>
+        <div class="card-index col s6 m4 l3">
+          <div class="card-panel center z-depth-5">
+            <svg>
+              <circle cx="55" cy="55" r="50"></circle>
+              <circle cx="55" cy="55" r="50"></circle>
+            </svg>
+            <i
+              class="index__icon fas fa-tree yellow-text text-accent-3 medium"
+            ></i>
+            <p class="index__number">45</p>
+            <h6 class="index__title green-text text-darken-3">Pollen</h6>
+            <span
+              class="index__badge new badge yellow accent-3 green-text text-darken-4"
+              data-badge-caption=""
+              >Poor</span
+            >
+          </div>
+        </div>
+        <div class="card-index col s6 m4 l3">
+          <div class="card-panel center z-depth-5">
+            <svg>
+              <circle cx="55" cy="55" r="50"></circle>
+              <circle cx="55" cy="55" r="50"></circle>
+            </svg>
+            <i
+              class="index__icon fas fa-lungs yellow-text text-accent-3 medium"
+            ></i>
+            <p class="index__number">55</p>
+            <h6 class="index__title green-text text-darken-3">Breathing</h6>
+            <span
+              class="index__badge new badge yellow accent-3 green-text text-darken-4"
+              data-badge-caption=""
+              >Poor</span
+            >
+          </div>
+        </div>
+        <div class="card-index col s6 m4 l3">
+          <div class="card-panel center z-depth-5">
+            <svg>
+              <circle cx="55" cy="55" r="50"></circle>
+              <circle cx="55" cy="55" r="50"></circle>
+            </svg>
+            <i
+              class="index__icon fas fa-tint orange-text text-darken-4 medium"
+            ></i>
+            <p class="index__number">85</p>
+            <h6 class="index__title green-text text-darken-3">Mold</h6>
+            <span
+              class="index__badge new badge orange darken-4 white-text text-darken-4"
+              data-badge-caption=""
+              >Unhealthy</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="page-footer green darken-1">
+      <div class="container">
+        <div class="row">
+          <div class="col s12 m4">
+            <ul>
+              <li class="footer__item">
+                <a
+                  class="footer__link grey-text text-lighten-3"
+                  href="index.html"
+                  >Weather</a
+                >
+              </li>
+              <li class="footer__item">
+                <a
+                  class="footer__link grey-text text-lighten-3"
+                  href="radar.html"
+                  >Radar</a
+                >
+              </li>
+              <li class="footer__item">
+                <a
+                  class="footer__link grey-text text-lighten-3"
+                  href="news.html"
+                  >News</a
+                >
+              </li>
+              <li class="footer__item">
+                <a
+                  class="footer__link grey-text text-lighten-3"
+                  href="gallery.html"
+                  >Gallery</a
+                >
+              </li>
+              <li class="footer__item">
+                <a class="footer__link grey-text text-lighten-3" href="#!"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col s12 m4">
+            <h5 class="white-text">Follow Us</h5>
+            <ul class="footer__social">
+              <li class="social__item chip blue darken-4">
+                <a
+                  class="grey-text text-lighten-3 btn btn-floating btn-small yellow darken-1"
+                  href="#!"
+                >
+                  <i class="social__icon fab fa-facebook-f"></i>
+                </a>
+                <span class="footer__social-title yellow-text text-darken-1">
+                  Facebook
+                </span>
+              </li>
+              <li class="social__item chip blue darken-4">
+                <a
+                  class="grey-text text-lighten-3 btn btn-floating btn-small yellow darken-1"
+                  href="#!"
+                >
+                  <i class="social__icon fab fa-twitter"></i>
+                </a>
+                <span class="footer__social-title yellow-text text-darken-1">
+                  Twitter
+                </span>
+              </li>
+              <li class="social__item chip blue darken-4">
+                <a
+                  class="grey-text text-lighten-3 btn btn-floating btn-small yellow darken-1"
+                  href="#!"
+                >
+                  <i class="social__icon fab fa-instagram"></i>
+                </a>
+                <span class="footer__social-title yellow-text text-darken-1">
+                  Instagram
+                </span>
+              </li>
+              <li class="social__item chip blue darken-4">
+                <a
+                  class="grey-text text-lighten-3 btn btn-floating btn-small yellow darken-1"
+                  href="#!"
+                >
+                  <i class="social__icon fab fa-linkedin-in"></i>
+                </a>
+                <span class="footer__social-title yellow-text text-darken-1">
+                  Linkedin
+                </span>
+              </li>
+            </ul>
+          </div>
+          <div class="col s12 m4">
+            <h5 class="white-text">Account Profile</h5>
+            <a href="#">
+              <i
+                class="footer__avatar material-icons medium green darken-4 white-text"
+                >account_circle</i
+              >
+            </a>
+            <div class="row">
+              <div class="col s12 l6">
+                <a
+                  href="#"
+                  class="footer__btn btn waves-effect waves-light green darken-4 yellow-text text-darken-1"
+                  >Create</a
+                >
+              </div>
+              <div class="col s12 l6">
+                <a
+                  href="#"
+                  class="footer__btn btn waves-effect waves-light green darken-4 yellow-text text-darken-1"
+                  >Sign In</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container center">
+          Forecaster &copy; Copyright 2020
+        </div>
+      </div>
+    </footer>
+
+    <!-- Modal: Live TV -->
+    <div id="modal__live" class="modal">
+      <div class="modal-content video-container">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/UIHKFZji5NE"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <div class="modal-footer">
+        <span class="modal__title green-text text-darken-2"
+          >Forecaster Weather News Live</span
+        >
+        <span class="modal__date grey-text"> May 24, 2020</span>
+        <a href="#" class="modal-close btn-flat waves-effect waves-green"
+          ><i class="material-icons green-text">close</i></a
+        >
+      </div>
+    </div>
+
+    <!--Import jQuery before materialize.js-->
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+    ></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+
+    <!-- Scripts for Weather Graph-->
+    <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/chart.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- Icons Reference -->
+    <script
+      src="https://kit.fontawesome.com/3c5d2efabe.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Initialize Comp. etc for Materialize -->
+    <script>
+      $(document).ready(function () {
+        // Init Sidenav
+        $('.button-collapse').sideNav();
+
+        // Autocomplete: Search
+        $('.autocomplete').autocomplete({
+          data: {
+            Miami: null,
+            Dallas: null,
+            'New York': null,
+            Madrid: null,
+            London: null,
+            Roma: null,
+            Paris: null,
+            Dubai: null,
+          },
+        });
+
+        // Init Modal
+        $('.modal').modal();
+
+        // Init Slider
+        $('.slider').slider({
+          indicators: false,
+          height: 580,
+          transition: 500,
+          interval: 3000,
+        });
+
+        // Tabs Scrollable
+        $('ul.tabs').tabs();
+
+        // Init Collapsible
+        $('.collapsible').collapsible({
+          accordion: false,
+        });
+
+        // Compare height of forecast column and news column to hide extra content
+        var first_element = column_right.childElementCount;
+        for (let index = first_element; index > 0; index--) {
+          var last_element = column_right.childNodes[4 * index - 1];
+          if (column_left.scrollHeight <= column_right.scrollHeight) {
+            last_element.style.display = 'none';
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

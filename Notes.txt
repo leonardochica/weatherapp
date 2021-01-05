@@ -1,0 +1,4 @@
+1) In profile section, add custom forecast by selecting cities 
+and using JS to generate new cards for each city and using API to 
+display weather depending on selected city
+

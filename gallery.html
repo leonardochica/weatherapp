@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Import Google Icon Font-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!--Import materialize.css-->
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="css/materialize.min.css"
+      media="screen,projection"
+    />
+    <link type="text/css" rel="stylesheet" href="css/main.css" />
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Forecaster</title>
+  </head>
+
+  <body class="green darken-4">
+    <header class="header">
+      <div class="navbar-fixed">
+        <nav class="green darken-1">
+          <div class="container">
+            <div class="nav-wrapper">
+              <a href="index.html" class="brand-logo">
+                <img class="logo" src="img/logo.png" alt="" />
+                Forecaster
+              </a>
+              <a
+                href="#"
+                data-activates="profile-view"
+                class="button-collapse show-on-large right"
+              >
+                <i class="material-icons">menu</i>
+              </a>
+              <ul class="right hide-on-med-and-down">
+                <li><a href="index.html">Weather</a></li>
+                <li><a href="radar.html">Radar</a></li>
+                <li><a href="news.html">News</a></li>
+                <li class="active"><a href="gallery.html">Gallery</a></li>
+                <!-- Side nav Profile -->
+              </ul>
+              <ul id="profile-view" class="side-nav">
+                <li class="user-view">
+                  <div class="background">
+                    <img src="img/user_background.jpg" alt="" />
+                  </div>
+                  <a href="#user">
+                    <img
+                      src="img/news/comments/myavatar.jpg"
+                      alt=""
+                      class="circle"
+                    />
+                  </a>
+                  <a href="#name">
+                    <span class="name white-text">Leonardo Chica</span>
+                  </a>
+                  <a href="#email">
+                    <span class="email white-text"
+                      >leonardochica@gmail.com
+                    </span>
+                  </a>
+                </li>
+                <li><a href="index.html">Weather</a></li>
+                <li><a href="radar.html">Radar</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><div class="divider"></div></li>
+                <li>
+                  <a
+                    class="navbar__button btn green darken-3 waves-effect waves-yellow"
+                    href="index.html"
+                    >Profile</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Weather ticker -->
+    <div
+      class="ticker__container green darken-1 white-text hide-on-med-and-down"
+    >
+      <div class="ticker-wrapper">
+        <div class="ticker">
+          <div class="ticker__item">
+            <img class="icon icon--weather" src="img/icons/sunny.png" alt="" />
+            <span class="ticker__title">Miami</span>
+            <span class="ticker__text">
+              <span class="yellow-text text-darken-1"> 75&#176;</span> |
+              <span class="yellow-text text-darken-1"> 85&#176;</span>
+            </span>
+          </div>
+          <div class="ticker__item">
+            <img class="icon icon--weather" src="img/icons/cloudy.png" alt="" />
+            <span class="ticker__title">Houston</span>
+            <span class="ticker__text">
+              <span class="yellow-text text-darken-1"> 65&#176;</span> |
+              <span class="yellow-text text-darken-1"> 70&#176;</span>
+            </span>
+          </div>
+          <div class="ticker__item">
+            <img class="icon icon--weather" src="img/icons/snow.png" alt="" />
+            <span class="ticker__title">Chicago</span>
+            <span class="ticker__text">
+              <span class="yellow-text text-darken-1"> 30&#176;</span> |
+              <span class="yellow-text text-darken-1"> 32&#176;</span>
+            </span>
+          </div>
+          <div class="ticker__item">
+            <img class="icon icon--weather" src="img/icons/rainy.png" alt="" />
+            <span class="ticker__title">Seattle</span>
+            <span class="ticker__text">
+              <span class="yellow-text text-darken-1"> 45&#176;</span> |
+              <span class="yellow-text text-darken-1"> 55&#176;</span>
+            </span>
+          </div>
+          <div class="ticker__item">
+            <img
+              class="icon icon--weather"
+              src="img/icons/thunderstorm.png"
+              alt=""
+            />
+            <span class="ticker__title">Los Angeles</span>
+            <span class="ticker__text">
+              <span class="yellow-text text-darken-1"> 66&#176;</span> |
+              <span class="yellow-text text-darken-1"> 72&#176;</span>
+            </span>
+          </div>
+          <div class="ticker__item">
+            <img class="icon icon--weather" src="img/icons/cloudy.png" alt="" />
+            <span class="ticker__title">New York</span>
+            <span class="ticker__text">
+              <span class="yellow-text text-darken-1"> 47&#176;</span> |
+              <span class="yellow-text text-darken-1"> 60&#176;</span>
+            </span>
+          </div>
+          <div class="ticker__item">
+            <img class="icon icon--weather" src="img/icons/rainy.png" alt="" />
+            <span class="ticker__title">Alburquerque</span>
+            <span class="ticker__text">
+              <span class="yellow-text text-darken-1"> 65&#176;</span> |
+              <span class="yellow-text text-darken-1"> 76&#176;</span>
+            </span>
+          </div>
+          <div class="ticker__item">
+            <img class="icon icon--weather" src="img/icons/rainy.png" alt="" />
+            <span class="ticker__title">Dallas</span>
+            <span class="ticker__text">
+              <span class="yellow-text text-darken-1"> 70&#176;</span> |
+              <span class="yellow-text text-darken-1"> 87&#176;</span>
+            </span>
+          </div>
+          <div class="ticker__item">
+            <img class="icon icon--weather" src="img/icons/cloudy.png" alt="" />
+            <span class="ticker__title">Indianapolis</span>
+            <span class="ticker__text">
+              <span class="yellow-text text-darken-1"> 40&#176;</span> |
+              <span class="yellow-text text-darken-1"> 55&#176;</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Live News Section -->
+    <aside class="section section__live row">
+      <div class="col s12">
+        <div class="chip blue darken-4">
+          <a
+            href="#modal__live"
+            class="btn btn-floating btn--live btn-small yellow darken-1 accent-4 pulse modal-trigger"
+          >
+            <i class="material-icons blue-text text-darken-4">tv</i>
+          </a>
+          <span class="yellow-text text-darken-1">
+            Weather TV Live
+          </span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Section: Carousel Slider  -->
+    <section class="section section__gallery-slider">
+      <div class="slider-content row white">
+        <div class="col s12">
+          <h5 class="green-text text-darken-2 center-align">
+            Recent Breathtaking Images
+          </h5>
+          <div class="carousel carousel-slider" data-indicators="true">
+            <a class="carousel-item">
+              <img
+                class="responsive-img"
+                src="img/gallery/carousel/image1.jpg"
+                alt=""
+              />
+              <span class="green-text text-darken-2">
+                Volcano Eruption caught on Camera
+              </span>
+              <span class="grey-text">
+                (July 3, 2020)
+              </span>
+            </a>
+            <a class="carousel-item">
+              <img
+                class="responsive-img"
+                src="img/gallery/carousel/image2.jpg"
+                alt=""
+              />
+              <span class="green-text text-darken-2">
+                Smoke from Factories affecting Wild Life
+              </span>
+              <span class="grey-text">
+                (July 2, 2020)
+              </span>
+            </a>
+            <a class="carousel-item">
+              <img
+                class="responsive-img"
+                src="img/gallery/carousel/image3.jpg"
+                alt=""
+              />
+              <span class="green-text text-darken-2">
+                80% of Population of a small town in Colorado uses Solar Panels
+              </span>
+              <span class="grey-text">
+                (July 2, 2020)
+              </span>
+            </a>
+            <a class="carousel-item">
+              <img
+                class="responsive-img"
+                src="img/gallery/carousel/image4.jpg"
+                alt=""
+              />
+              <span class="green-text text-darken-2">
+                Snow Storm in Vancouver Canada
+              </span>
+              <span class="grey-text">
+                (July 2, 2020)
+              </span>
+            </a>
+            <a class="carousel-item">
+              <img
+                class="responsive-img"
+                src="img/gallery/carousel/image5.jpg"
+                alt=""
+              />
+              <span class="green-text text-darken-2">
+                Clear Rainbow captured in Dessert Area
+              </span>
+              <span class="grey-text">
+                (July 1, 2020)
+              </span>
+            </a>
+            <a class="carousel-item">
+              <img
+                class="responsive-img"
+                src="img/gallery/carousel/image6.jpg"
+                alt=""
+              />
+              <span class="green-text text-darken-2">
+                Spectacular View of Full Moon from Golden Bridge in New York
+              </span>
+              <span class="grey-text">
+                (July 1, 2020)
+              </span>
+            </a>
+            <a class="carousel-item">
+              <img
+                class="responsive-img"
+                src="img/gallery/carousel/image7.jpg"
+                alt=""
+              />
+              <span class="green-text text-darken-2">
+                Clear Skies in New York Today
+              </span>
+              <span class="grey-text">
+                (July 1, 2020)
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Gallery -->
+    <section class="section section__gallery">
+      <div class="row white">
+        <div class="col s12">
+          <h5 class="green-text text-darken-2 center-align">Gallery</h5>
+        </div>
+      </div>
+      <div class="row">
+        <div class="gallery__item col s4 m3">
+          <img
+            class="responsive-img materialboxed"
+            src="img/gallery/image1.jpg"
+            alt=""
+            data-caption="Tree surrounded by Snow"
+          />
+        </div>
+        <div class="gallery__item col s4 m3">
+          <img
+            class="responsive-img materialboxed"
+            src="img/gallery/image2.jpg"
+            alt=""
+            data-caption="Brown-wooden House on Snow"
+          />
+        </div>
+        <div class="gallery__item col s4 m3">
+          <img
+            class="responsive-img materialboxed"
+            src="img/gallery/image3.jpg"
+            alt=""
+            data-caption="Snow Landscape with trailroad around trees"
+          />
+        </div>
+        <div class="gallery__item col s4 m3">
+          <img
+            class="responsive-img materialboxed"
+            src="img/gallery/image4.jpg"
+            alt=""
+            data-caption="Gray-wooden House burning"
+          />
+        </div>
+        <div class="gallery__item col s4 m3">
+          <img
+            class="responsive-img materialboxed"
+            src="img/gallery/image5.jpg"
+            alt=""
+            data-caption="Forest Trees during Sunrise"
+          />
+        </div>
+        <div class="gallery__item col s4 m3">
+          <img
+            class="responsive-img materialboxed"
+            src="img/gallery/image6.jpg"
+            alt=""
+            data-caption="Forest Trees"
+          />
+        </div>
+        <div class="gallery__item col s4 m3">
+          <img
+            class="responsive-img materialboxed"
+            src="img/gallery/image7.jpg"
+            alt=""
+            data-caption="Person standing at the edge of Rock Formation"
+          />
+        </div>
+        <div class="gallery__item col s4 m3">
+          <img
+            class="responsive-img materialboxed"
+            src="img/gallery/image8.jpg"
+            alt=""
+            data-caption="Person standing on edge of Cliff"
+          />
+        </div>
+        <div class="gallery__item col s4 m3">
+          <img
+            class="responsive-img materialboxed"
+            src="img/gallery/image9.jpg"
+            alt=""
+            data-caption="Bridge under white Clouds"
+          />
+        </div>
+        <div class="gallery__item col s4 m3">
+          <img
+            class="responsive-img materialboxed"
+            src="img/gallery/image10.jpg"
+            alt=""
+            data-caption="Red bus on Road"
+          />
+        </div>
+        <div class="gallery__item col s4 m3">
+          <img
+            class="responsive-img materialboxed"
+            src="img/gallery/image11.jpg"
+            alt=""
+            data-caption="Big Ben in London"
+          />
+        </div>
+        <div class="gallery__item col s4 m3">
+          <img
+            class="responsive-img materialboxed"
+            src="img/gallery/image12.jpg"
+            alt=""
+            data-caption="Sand beach with people swimming"
+          />
+        </div>
+        <div class="gallery__item col s4 m3">
+          <img
+            class="responsive-img materialboxed"
+            src="img/gallery/image13.jpg"
+            alt=""
+            data-caption="Snowman with Camera"
+          />
+        </div>
+        <div class="gallery__item col s4 m3">
+          <img
+            class="responsive-img materialboxed"
+            src="img/gallery/image14.jpg"
+            alt=""
+            data-caption="Snowman with Camera"
+          />
+        </div>
+        <div class="gallery__item col s4 m3">
+          <img
+            class="responsive-img materialboxed"
+            src="img/gallery/image15.jpg"
+            alt=""
+            data-caption="Brown tree with Snow"
+          />
+        </div>
+        <div class="gallery__item col s4 m3">
+          <img
+            class="responsive-img materialboxed"
+            src="img/gallery/image16.jpg"
+            alt=""
+            data-caption="Woman walking on Seashore"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="page-footer green darken-1">
+      <div class="container">
+        <div class="row">
+          <div class="col s12 m4">
+            <ul>
+              <li class="footer__item">
+                <a
+                  class="footer__link grey-text text-lighten-3"
+                  href="index.html"
+                  >Weather</a
+                >
+              </li>
+              <li class="footer__item">
+                <a
+                  class="footer__link grey-text text-lighten-3"
+                  href="radar.html"
+                  >Radar</a
+                >
+              </li>
+              <li class="footer__item">
+                <a
+                  class="footer__link grey-text text-lighten-3"
+                  href="news.html"
+                  >News</a
+                >
+              </li>
+              <li class="footer__item">
+                <a
+                  class="footer__link grey-text text-lighten-3"
+                  href="gallery.html"
+                  >Gallery</a
+                >
+              </li>
+              <li class="footer__item">
+                <a class="footer__link grey-text text-lighten-3" href="#!"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col s12 m4">
+            <h5 class="white-text">Follow Us</h5>
+            <ul class="footer__social">
+              <li class="social__item chip blue darken-4">
+                <a
+                  class="grey-text text-lighten-3 btn btn-floating btn-small yellow darken-1"
+                  href="#!"
+                >
+                  <i class="social__icon fab fa-facebook-f"></i>
+                </a>
+                <span class="footer__social-title yellow-text text-darken-1">
+                  Facebook
+                </span>
+              </li>
+              <li class="social__item chip blue darken-4">
+                <a
+                  class="grey-text text-lighten-3 btn btn-floating btn-small yellow darken-1"
+                  href="#!"
+                >
+                  <i class="social__icon fab fa-twitter"></i>
+                </a>
+                <span class="footer__social-title yellow-text text-darken-1">
+                  Twitter
+                </span>
+              </li>
+              <li class="social__item chip blue darken-4">
+                <a
+                  class="grey-text text-lighten-3 btn btn-floating btn-small yellow darken-1"
+                  href="#!"
+                >
+                  <i class="social__icon fab fa-instagram"></i>
+                </a>
+                <span class="footer__social-title yellow-text text-darken-1">
+                  Instagram
+                </span>
+              </li>
+              <li class="social__item chip blue darken-4">
+                <a
+                  class="grey-text text-lighten-3 btn btn-floating btn-small yellow darken-1"
+                  href="#!"
+                >
+                  <i class="social__icon fab fa-linkedin-in"></i>
+                </a>
+                <span class="footer__social-title yellow-text text-darken-1">
+                  Linkedin
+                </span>
+              </li>
+            </ul>
+          </div>
+          <div class="col s12 m4">
+            <h5 class="white-text">Account Profile</h5>
+            <a href="#">
+              <i
+                class="footer__avatar material-icons medium green darken-4 white-text"
+                >account_circle</i
+              >
+            </a>
+            <div class="row">
+              <div class="col s12 l6">
+                <a
+                  href="#"
+                  id="create-profile__btn"
+                  class="footer__btn btn waves-effect waves-light green darken-4 yellow-text text-darken-1"
+                  >Create</a
+                >
+              </div>
+              <div class="col s12 l6">
+                <a
+                  href="#"
+                  class="footer__btn btn waves-effect waves-light green darken-4 yellow-text text-darken-1"
+                  >Sign In</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container center">
+          Forecaster &copy; Copyright 2020
+        </div>
+      </div>
+    </footer>
+
+    <!-- Modal: Live TV -->
+    <div id="modal__live" class="modal">
+      <div class="modal-content video-container">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/UIHKFZji5NE"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <div class="modal-footer">
+        <span class="modal__title green-text text-darken-2"
+          >Forecaster Weather News Live</span
+        >
+        <span class="modal__date grey-text"> May 24, 2020</span>
+        <a href="#" class="modal-close btn-flat waves-effect waves-green"
+          ><i class="material-icons green-text">close</i></a
+        >
+      </div>
+    </div>
+
+    <!--Import jQuery before materialize.js-->
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+    ></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+
+    <!-- Main Script-->
+    <script src="js/main.js"></script>
+
+    <!-- Icons Reference -->
+    <script
+      src="https://kit.fontawesome.com/3c5d2efabe.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Initialize Comp. etc for Materialize -->
+    <script>
+      $(document).ready(function () {
+        // Init Sidenav
+        $('.button-collapse').sideNav();
+
+        //  Init Carousel
+        $('.carousel.carousel-slider').carousel({
+          fullWidth: true,
+        });
+
+        // Init Material Box for Images
+        // $('.materialboxed').materialbox();
+
+        // Init Modal
+        $('.modal').modal();
+
+        // Init Slider
+        $('.slider').slider({
+          indicators: false,
+          height: 580,
+          transition: 500,
+          interval: 3000,
+        });
+
+        // Tabs Scrollable
+        $('ul.tabs').tabs();
+
+        // Init Collapsible
+        $('.collapsible').collapsible({
+          accordion: false,
+        });
+      });
+    </script>
+  </body>
+</html>

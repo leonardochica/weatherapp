@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Import Google Icon Font-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!--Import materialize.css-->
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="css/materialize.min.css"
+      media="screen,projection"
+    />
+    <link type="text/css" rel="stylesheet" href="css/main.css" />
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Forecaster</title>
+  </head>
+
+  <body class="green darken-4">
+    <header class="header">
+      <div class="navbar-fixed">
+        <nav class="green darken-1">
+          <div class="container">
+            <div class="nav-wrapper">
+              <a href="index.html" class="brand-logo">
+                <img class="logo" src="img/logo.png" alt="" />
+                Forecaster
+              </a>
+              <a
+                href="#"
+                data-activates="profile-view"
+                class="button-collapse show-on-large right"
+              >
+                <i class="material-icons">menu</i>
+              </a>
+              <ul class="right hide-on-med-and-down">
+                <li><a href="index.html">Weather</a></li>
+                <li class="active"><a href="radar.html">Radar</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <!-- Side nav Profile -->
+              </ul>
+              <ul id="profile-view" class="side-nav">
+                <li class="user-view">
+                  <div class="background">
+                    <img src="img/user_background.jpg" alt="" />
+                  </div>
+                  <a href="#user">
+                    <img
+                      src="img/news/comments/myavatar.jpg"
+                      alt=""
+                      class="circle"
+                    />
+                  </a>
+                  <a href="#name">
+                    <span class="name white-text">Leonardo Chica</span>
+                  </a>
+                  <a href="#email">
+                    <span class="email white-text"
+                      >leonardochica@gmail.com
+                    </span>
+                  </a>
+                </li>
+                <li><a href="index.html">Weather</a></li>
+                <li><a href="radar.html">Radar</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><div class="divider"></div></li>
+                <li>
+                  <a
+                    class="navbar__button btn green darken-3 waves-effect waves-yellow"
+                    href="index.html"
+                    >Profile</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Weather ticker -->
+    <div
+      class="ticker__container green darken-1 white-text hide-on-med-and-down"
+    >
+      <div class="ticker-wrapper">
+        <div class="ticker">
+          <div class="ticker__item">
+            <img class="icon icon--weather" src="img/icons/sunny.png" alt="" />
+            <span class="ticker__title">Miami</span>
+            <span class="ticker__text">
+              <span class="yellow-text text-darken-1"> 75&#176;</span> |
+              <span class="yellow-text text-darken-1"> 85&#176;</span>
+            </span>
+          </div>
+          <div class="ticker__item">
+            <img class="icon icon--weather" src="img/icons/cloudy.png" alt="" />
+            <span class="ticker__title">Houston</span>
+            <span class="ticker__text">
+              <span class="yellow-text text-darken-1"> 65&#176;</span> |
+              <span class="yellow-text text-darken-1"> 70&#176;</span>
+            </span>
+          </div>
+          <div class="ticker__item">
+            <img class="icon icon--weather" src="img/icons/snow.png" alt="" />
+            <span class="ticker__title">Chicago</span>
+            <span class="ticker__text">
+              <span class="yellow-text text-darken-1"> 30&#176;</span> |
+              <span class="yellow-text text-darken-1"> 32&#176;</span>
+            </span>
+          </div>
+          <div class="ticker__item">
+            <img class="icon icon--weather" src="img/icons/rainy.png" alt="" />
+            <span class="ticker__title">Seattle</span>
+            <span class="ticker__text">
+              <span class="yellow-text text-darken-1"> 45&#176;</span> |
+              <span class="yellow-text text-darken-1"> 55&#176;</span>
+            </span>
+          </div>
+          <div class="ticker__item">
+            <img
+              class="icon icon--weather"
+              src="img/icons/thunderstorm.png"
+              alt=""
+            />
+            <span class="ticker__title">Los Angeles</span>
+            <span class="ticker__text">
+              <span class="yellow-text text-darken-1"> 66&#176;</span> |
+              <span class="yellow-text text-darken-1"> 72&#176;</span>
+            </span>
+          </div>
+          <div class="ticker__item">
+            <img class="icon icon--weather" src="img/icons/cloudy.png" alt="" />
+            <span class="ticker__title">New York</span>
+            <span class="ticker__text">
+              <span class="yellow-text text-darken-1"> 47&#176;</span> |
+              <span class="yellow-text text-darken-1"> 60&#176;</span>
+            </span>
+          </div>
+          <div class="ticker__item">
+            <img class="icon icon--weather" src="img/icons/rainy.png" alt="" />
+            <span class="ticker__title">Alburquerque</span>
+            <span class="ticker__text">
+              <span class="yellow-text text-darken-1"> 65&#176;</span> |
+              <span class="yellow-text text-darken-1"> 76&#176;</span>
+            </span>
+          </div>
+          <div class="ticker__item">
+            <img class="icon icon--weather" src="img/icons/rainy.png" alt="" />
+            <span class="ticker__title">Dallas</span>
+            <span class="ticker__text">
+              <span class="yellow-text text-darken-1"> 70&#176;</span> |
+              <span class="yellow-text text-darken-1"> 87&#176;</span>
+            </span>
+          </div>
+          <div class="ticker__item">
+            <img class="icon icon--weather" src="img/icons/cloudy.png" alt="" />
+            <span class="ticker__title">Indianapolis</span>
+            <span class="ticker__text">
+              <span class="yellow-text text-darken-1"> 40&#176;</span> |
+              <span class="yellow-text text-darken-1"> 55&#176;</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section: Search -->
+    <section class="section__search">
+      <div class="row">
+        <div class="col s12 m8 l6">
+          <h5 class="search__title white-text text-darken-1">
+            Search City or Zip Code
+          </h5>
+          <div class="input-field">
+            <input
+              type="text"
+              name="locations"
+              id="search"
+              class="search__input grey lighten-2 green-text text-darken-3 autocomplete"
+            />
+            <label for="search" class="label-icon">
+              <i class="material-icons green-text text-darken-1">search</i>
+            </label>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Live News Section -->
+    <aside class="section section__live row">
+      <div class="col s12">
+        <div class="chip blue darken-4">
+          <a
+            href="#modal__live"
+            class="btn btn-floating btn--live btn-small yellow darken-1 accent-4 pulse modal-trigger"
+          >
+            <i class="material-icons blue-text text-darken-4">tv</i>
+          </a>
+          <span class="yellow-text text-darken-1">
+            Weather TV Live
+          </span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Section: Radar -->
+    <section class="section section-radar">
+      <div class="row section-radar__container">
+        <div class="section-radar__content col s12 l9 grey lighten-3">
+          <div id="map"></div>
+          <!-- Tabs for filters -->
+          <div class="row">
+            <div class="col s12 m1 main-tabs">
+              <ul class="tabs grey lighten-2">
+                <li class="tab">
+                  <a href="#tab1" class="radar-link">
+                    <i
+                      class="material-icons green-text text-darken-3 tooltipped"
+                      data-position="right"
+                      data-tooltip="Layers"
+                      >layers</i
+                    >
+                  </a>
+                </li>
+                <li class="tab">
+                  <a href="#tab2" class="radar-link">
+                    <i
+                      class="material-icons green-text text-darken-3 tooltipped"
+                      data-position="right"
+                      data-tooltip="Markers"
+                      >check_box</i
+                    >
+                  </a>
+                </li>
+                <li class="tab">
+                  <a href="#tab3" class="radar-link">
+                    <i
+                      class="material-icons green-text text-darken-3 tooltipped"
+                      data-position="right"
+                      data-tooltip="Settings"
+                      >settings</i
+                    >
+                  </a>
+                </li>
+                <li class="tab">
+                  <a href="#tab4" class="radar-link">
+                    <i
+                      class="material-icons green-text text-darken-3 tooltipped"
+                      data-position="right"
+                      data-tooltip="Storm Tracking"
+                      >trending_up</i
+                    >
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!-- Tabs Contents -->
+            <div class="col s12 m11">
+              <!-- Tab1 -->
+              <div id="tab1" class="row">
+                <div class="col s12 m6 tab--left">
+                  <h5
+                    class="tab-content__title col s12 center-align green-text text-darken-3"
+                  >
+                    Map Layers
+                  </h5>
+                  <div class="tab-content row">
+                    <div class="tab-content__item col s4 center-align">
+                      <a href="#">
+                        <img
+                          class="responsive-img"
+                          src="img/radar/standard.JPG"
+                          alt=""
+                        />
+                      </a>
+                      <span>Standard</span>
+                    </div>
+                    <div class="tab-content__item col s4 center-align">
+                      <a href="#">
+                        <img
+                          class="responsive-img active"
+                          src="img/radar/satellite.JPG"
+                          alt=""
+                        />
+                      </a>
+                      <span>Satellite</span>
+                    </div>
+                    <div class="tab-content__item col s4 center-align">
+                      <a href="#">
+                        <img
+                          class="responsive-img"
+                          src="img/radar/hydrid.JPG"
+                          alt=""
+                        />
+                      </a>
+                      <span>Hybrid</span>
+                    </div>
+                  </div>
+                  <div class="tab-content row">
+                    <div class="col s12">
+                      <div class="center-align">Opacity</div>
+                      <div class="col s2">0%</div>
+                      <div class="col s8">
+                        <div class="range-field">
+                          <input type="range" min="0" max="100" />
+                        </div>
+                      </div>
+                      <div class="col s2">100%</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col s12 m6 tab--right">
+                  <h5
+                    class="tab-content__title col s12 center-align green-text text-darken-3"
+                  >
+                    Weather Layers
+                  </h5>
+                  <div class="tab-content row">
+                    <div class="tab-content__item col s4 center-align">
+                      <a href="#">
+                        <img
+                          class="responsive-img active"
+                          src="img/radar/precipitation.JPG"
+                          alt=""
+                        />
+                      </a>
+                      <span>Precipitation</span>
+                    </div>
+                    <div class="tab-content__item col s4 center-align">
+                      <a href="#">
+                        <img
+                          class="responsive-img"
+                          src="img/radar/clouds.JPG"
+                          alt=""
+                        />
+                      </a>
+                      <span>Clouds</span>
+                    </div>
+                    <div class="tab-content__item col s4 center-align">
+                      <a href="#">
+                        <img
+                          class="responsive-img"
+                          src="img/radar/temperature.JPG"
+                          alt=""
+                        />
+                      </a>
+                      <span>Temperature</span>
+                    </div>
+                  </div>
+                  <div class="tab-content row">
+                    <div class="tab-content__item col s4 center-align">
+                      <a href="#">
+                        <img
+                          class="responsive-img"
+                          src="img/radar/windstream.JPG"
+                          alt=""
+                        />
+                      </a>
+                      <span>WindStream</span>
+                    </div>
+                    <div class="tab-content__item col s4 center-align">
+                      <a href="#">
+                        <img
+                          class="responsive-img"
+                          src="img/radar/seatemperature.JPG"
+                          alt=""
+                        />
+                      </a>
+                      <span>Sea Temperature</span>
+                    </div>
+                    <div class="tab-content__item col s4 center-align">
+                      <a href="#">
+                        <img
+                          class="responsive-img"
+                          src="img/radar/feelslike.JPG"
+                          alt=""
+                        />
+                      </a>
+                      <span>Feels Like</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Tab2 -->
+              <div id="tab2" class="row">
+                <div class="col s12 center-align">
+                  <h5 class="tab-content__title green-text text-darken-3">
+                    Featured Data
+                  </h5>
+                </div>
+                <div class="tab-content row">
+                  <div class="tab-content__item col s12 m6">
+                    <div class="row">
+                      <div class="col s12">
+                        <div class="col s6 center-align">Temperature</div>
+                        <div class="col s6 switch">
+                          <label>
+                            <input type="checkbox" />
+                            <span class="lever blue-text"></span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col s12">
+                        <div class="col s6 center-align">Wind Speed</div>
+                        <div class="col s6 switch">
+                          <label>
+                            <input type="checkbox" />
+                            <span class="lever blue-text"></span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col s12">
+                        <div class="col s6 center-align">Flooding</div>
+                        <div class="col s6 switch">
+                          <label>
+                            <input type="checkbox" />
+                            <span class="lever blue-text"></span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-content__item col s12 m6">
+                    <div class="row">
+                      <div class="col s12">
+                        <div class="col s6 center-align">Active Fires</div>
+                        <div class="col s6 switch">
+                          <label>
+                            <input type="checkbox" />
+                            <span class="lever blue-text"></span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col s12">
+                        <div class="col s6 center-align">Humidity</div>
+                        <div class="col s6 switch">
+                          <label>
+                            <input type="checkbox" />
+                            <span class="lever blue-text"></span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col s12">
+                        <div class="col s6 center-align">Active Storms</div>
+                        <div class="col s6 switch">
+                          <label>
+                            <input type="checkbox" />
+                            <span class="lever blue-text"></span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Tab3 -->
+              <div id="tab3" class="row">
+                <div class="col s12 m6">
+                  <h5
+                    class="tab-content__title col s12 green-text text-darken-3 center-align"
+                  >
+                    Settings
+                  </h5>
+                  <div class="tab-content row">
+                    <div class="tab-content__item col s12">
+                      <div class="row">
+                        <div class="col s6 center-align">
+                          Temperature Units:
+                        </div>
+                        <div class="col s6">
+                          <span class="col s6">
+                            <input
+                              type="radio"
+                              class="with-gap"
+                              name="temp_units"
+                              id="C"
+                              checked
+                            />
+                            <label for="C" class="green-text text-darken-3"
+                              >C&#176;</label
+                            >
+                          </span>
+                          <span class="col s6">
+                            <input
+                              type="radio"
+                              class="with-gap"
+                              name="temp_units"
+                              id="F"
+                            />
+                            <label for="F" class="green-text text-darken-3"
+                              >F&#176;</label
+                            >
+                          </span>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col s12">
+                          <div class="col s6 center-align">
+                            Current Location
+                          </div>
+                          <div class="col s6 switch">
+                            <label>
+                              <input type="checkbox" />
+                              <span class="lever blue-text"></span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col s12">
+                          <div class="col s6 center-align">
+                            Zoom
+                          </div>
+                          <div class="col s6 switch">
+                            <label>
+                              <input type="checkbox" />
+                              <span class="lever blue-text"></span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col s12 m6 tab--right">
+                  <h5
+                    class="tab-content__title col s12 center-align green-text text-darken-3"
+                  >
+                    Map Types
+                  </h5>
+
+                  <div class="tab-content row">
+                    <div class="tab-content__item col s4 center-align">
+                      <a href="#">
+                        <img
+                          class="responsive-img"
+                          src="img/radar/lightmap.JPG"
+                          alt=""
+                        />
+                      </a>
+                      <span>Light Map</span>
+                    </div>
+                    <div class="tab-content__item col s4 center-align">
+                      <a href="#">
+                        <img
+                          class="responsive-img"
+                          src="img/radar/darkmap.JPG"
+                          alt=""
+                        />
+                      </a>
+                      <span>Dark Map</span>
+                    </div>
+                  </div>
+
+                  <div class="col s12">
+                    <div class="center-align">Opacity</div>
+                    <div class="col s2">0%</div>
+                    <div class="col s8">
+                      <div class="range-field">
+                        <input type="range" min="0" max="100" />
+                      </div>
+                    </div>
+                    <div class="col s2">100%</div>
+                  </div>
+                </div>
+              </div>
+              <!-- Tab4 -->
+              <div id="tab4" class="row">
+                <div class="col s12 m6 tab--left">
+                  <h5
+                    class="tab-content__title col s12 center-align green-text text-darken-3"
+                  >
+                    Storms | Hurricanes Maps
+                  </h5>
+                  <div class="tab-content row">
+                    <div class="tab-content__item col s4 center-align">
+                      <a href="#">
+                        <img
+                          class="responsive-img"
+                          src="img/radar/hurricane.JPG"
+                          alt=""
+                        />
+                      </a>
+                      <span>Hurricane Tracker</span>
+                    </div>
+                    <div class="tab-content__item col s4 center-align">
+                      <a href="#">
+                        <img
+                          class="responsive-img active"
+                          src="img/radar/tornado.JPG"
+                          alt=""
+                        />
+                      </a>
+                      <span>Tornado Warning</span>
+                    </div>
+                    <div class="tab-content__item col s4 center-align">
+                      <a href="#">
+                        <img
+                          class="responsive-img"
+                          src="img/radar/fronts.JPG"
+                          alt=""
+                        />
+                      </a>
+                      <span>Fronts</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col s12 m6 tab--right">
+                  <h5
+                    class="tab-content__title col s12 center-align green-text text-darken-3"
+                  >
+                    Storms Data
+                  </h5>
+                  <div class="tab-content row">
+                    <div class="tab-content__item col s12">
+                      <div class="row">
+                        <div class="col s12">
+                          <div class="col s6 center-align">
+                            Active Storms
+                          </div>
+                          <div class="col s6 switch">
+                            <label>
+                              <input type="checkbox" />
+                              <span class="lever blue-text"></span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col s6 center-align">
+                          Storm Surge
+                        </div>
+                        <div class="col s6 switch">
+                          <label>
+                            <input type="checkbox" />
+                            <span class="lever blue-text"></span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l3 section-radar__aside">
+          <div class="white aside__content">
+            <h5 class="center-align aside__title green-text text-darken-2">
+              Temperatures
+            </h5>
+            <ul class="collection aside__list">
+              <li class="collection-item">
+                <div class="row aside__item">
+                  <div class="col s3">
+                    <img
+                      class="responsive-img"
+                      src="img/icons/mostly-sunny.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col s5">
+                    <div>Miami</div>
+                    <span class="green-text text-darken-1"> 65&#176;</span> |
+                    <span class="green-text text-darken-1"> 70&#176;</span>
+                  </div>
+                  <div class="col s4">
+                    <div class="right-align">
+                      20%
+                      <i class="material-icons blue-text text-lighten-1"
+                        >opacity</i
+                      >
+                    </div>
+                  </div>
+                  <div class="col s12">
+                    Mostly Sunny
+                  </div>
+                </div>
+              </li>
+              <li class="collection-item">
+                <div class="row aside__item">
+                  <div class="col s3">
+                    <img
+                      class="responsive-img"
+                      src="img/icons/cloudy.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col s5">
+                    <div>Houston</div>
+                    <span class="green-text text-darken-1"> 71&#176;</span> |
+                    <span class="green-text text-darken-1"> 77&#176;</span>
+                  </div>
+                  <div class="col s4">
+                    <div class="right-align">
+                      40%
+                      <i class="material-icons blue-text text-lighten-1"
+                        >opacity</i
+                      >
+                    </div>
+                  </div>
+                  <div class="col s12">
+                    Cloudy
+                  </div>
+                </div>
+              </li>
+              <li class="collection-item">
+                <div class="row aside__item">
+                  <div class="col s3">
+                    <img
+                      class="responsive-img"
+                      src="img/icons/thunderstorm.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col s5">
+                    <div>Seattle</div>
+                    <span class="green-text text-darken-1"> 55&#176;</span> |
+                    <span class="green-text text-darken-1"> 60&#176;</span>
+                  </div>
+                  <div class="col s4">
+                    <div class="right-align">
+                      70%
+                      <i class="material-icons blue-text text-lighten-1"
+                        >opacity</i
+                      >
+                    </div>
+                  </div>
+                  <div class="col s12">
+                    Thunderstorms
+                  </div>
+                </div>
+              </li>
+              <li class="collection-item">
+                <div class="row aside__item">
+                  <div class="col s3">
+                    <img
+                      class="responsive-img"
+                      src="img/icons/sunny.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col s5">
+                    <div>Washington DC</div>
+                    <span class="green-text text-darken-1"> 68&#176;</span> |
+                    <span class="green-text text-darken-1"> 78&#176;</span>
+                  </div>
+                  <div class="col s4">
+                    <div class="right-align">
+                      10%
+                      <i class="material-icons blue-text text-lighten-1"
+                        >opacity</i
+                      >
+                    </div>
+                  </div>
+                  <div class="col s12">
+                    Mostly Sunny
+                  </div>
+                </div>
+              </li>
+              <li class="collection-item">
+                <div class="row aside__item">
+                  <div class="col s3">
+                    <img
+                      class="responsive-img"
+                      src="img/icons/sunny.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col s5">
+                    <div>Los Angeles</div>
+                    <span class="green-text text-darken-1"> 89&#176;</span> |
+                    <span class="green-text text-darken-1"> 77&#176;</span>
+                  </div>
+                  <div class="col s4">
+                    <div class="right-align">
+                      10%
+                      <i class="material-icons blue-text text-lighten-1"
+                        >opacity</i
+                      >
+                    </div>
+                  </div>
+                  <div class="col s12">
+                    Mostly Sunny
+                  </div>
+                </div>
+              </li>
+              <li class="collection-item">
+                <div class="row aside__item">
+                  <div class="col s3">
+                    <img
+                      class="responsive-img"
+                      src="img/icons/rainy.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col s5">
+                    <div>New York City</div>
+                    <span class="green-text text-darken-1"> 62&#176;</span> |
+                    <span class="green-text text-darken-1"> 70&#176;</span>
+                  </div>
+                  <div class="col s4">
+                    <div class="right-align">
+                      50%
+                      <i class="material-icons blue-text text-lighten-1"
+                        >opacity</i
+                      >
+                    </div>
+                  </div>
+                  <div class="col s12">
+                    Rainy
+                  </div>
+                </div>
+              </li>
+              <li class="collection-item">
+                <div class="row aside__item">
+                  <div class="col s3">
+                    <img
+                      class="responsive-img"
+                      src="img/icons/cloudy.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col s5">
+                    <div>Dallas</div>
+                    <span class="green-text text-darken-1"> 73&#176;</span> |
+                    <span class="green-text text-darken-1"> 79&#176;</span>
+                  </div>
+                  <div class="col s4">
+                    <div class="right-align">
+                      30%
+                      <i class="material-icons blue-text text-lighten-1"
+                        >opacity</i
+                      >
+                    </div>
+                  </div>
+                  <div class="col s12">
+                    Mostly Cloudy
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col m6 radar__news hide-on-large-only">
+          <!-- Card News 1 -->
+          <div class="white darken-4 news__item">
+            <div class="card">
+              <div class="card-content">
+                <div class="card-image">
+                  <img src="img/news/home-img2.jpg" alt="" />
+                </div>
+                <div class="card-title">
+                  Phases of the Moon for 2020
+                </div>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptatem alias, nobis explicabo provident nulla quam maxime
+                  ad consequuntur ea adipisci.
+                </p>
+              </div>
+              <!-- Links to card -->
+              <div class="card-action">
+                <a class="card__button green-text text-darken-2" href="#"
+                  >Read More
+                  <i class="card__icon material-icons">chevron_right</i></a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Card News 2 -->
+          <div class="white darken-4 news__item">
+            <div class="card">
+              <div class="card-content">
+                <div class="card-image">
+                  <img src="img/news/home-img3.jpg" alt="" />
+                </div>
+                <div class="card-title">
+                  Tornadoes Damage In North Tennessee on Sunday
+                </div>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptatem alias, nobis explicabo provident nulla quam maxime
+                  ad consequuntur ea adipisci.
+                </p>
+              </div>
+              <!-- Links to card -->
+              <div class="card-action">
+                <a class="card__button green-text text-darken-2" href="#"
+                  >Read More
+                  <i class="card__icon material-icons">chevron_right</i></a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Card News 3 -->
+          <div class="white darken-4 news__item">
+            <div class="card">
+              <div class="card-content">
+                <div class="card-image">
+                  <img src="img/news/home-img4.jpg" alt="" />
+                </div>
+                <div class="card-title">
+                  Lunar and Solar eclipse in June: Europe and Asia
+                </div>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptatem alias, nobis explicabo provident nulla quam maxime
+                  ad consequuntur ea adipisci.
+                </p>
+              </div>
+              <!-- Links to card -->
+              <div class="card-action">
+                <a class="card__button green-text text-darken-2" href="#"
+                  >Read More
+                  <i class="card__icon material-icons">chevron_right</i></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="page-footer green darken-1">
+      <div class="container">
+        <div class="row">
+          <div class="col s12 m4">
+            <ul>
+              <li class="footer__item">
+                <a
+                  class="footer__link grey-text text-lighten-3"
+                  href="index.html"
+                  >Weather</a
+                >
+              </li>
+              <li class="footer__item">
+                <a
+                  class="footer__link grey-text text-lighten-3"
+                  href="radar.html"
+                  >Radar</a
+                >
+              </li>
+              <li class="footer__item">
+                <a
+                  class="footer__link grey-text text-lighten-3"
+                  href="news.html"
+                  >News</a
+                >
+              </li>
+              <li class="footer__item">
+                <a
+                  class="footer__link grey-text text-lighten-3"
+                  href="gallery.html"
+                  >Gallery</a
+                >
+              </li>
+              <li class="footer__item">
+                <a class="footer__link grey-text text-lighten-3" href="#!"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col s12 m4">
+            <h5 class="white-text">Follow Us</h5>
+            <ul class="footer__social">
+              <li class="social__item chip blue darken-4">
+                <a
+                  class="grey-text text-lighten-3 btn btn-floating btn-small yellow darken-1"
+                  href="#!"
+                >
+                  <i class="social__icon fab fa-facebook-f"></i>
+                </a>
+                <span class="footer__social-title yellow-text text-darken-1">
+                  Facebook
+                </span>
+              </li>
+              <li class="social__item chip blue darken-4">
+                <a
+                  class="grey-text text-lighten-3 btn btn-floating btn-small yellow darken-1"
+                  href="#!"
+                >
+                  <i class="social__icon fab fa-twitter"></i>
+                </a>
+                <span class="footer__social-title yellow-text text-darken-1">
+                  Twitter
+                </span>
+              </li>
+              <li class="social__item chip blue darken-4">
+                <a
+                  class="grey-text text-lighten-3 btn btn-floating btn-small yellow darken-1"
+                  href="#!"
+                >
+                  <i class="social__icon fab fa-instagram"></i>
+                </a>
+                <span class="footer__social-title yellow-text text-darken-1">
+                  Instagram
+                </span>
+              </li>
+              <li class="social__item chip blue darken-4">
+                <a
+                  class="grey-text text-lighten-3 btn btn-floating btn-small yellow darken-1"
+                  href="#!"
+                >
+                  <i class="social__icon fab fa-linkedin-in"></i>
+                </a>
+                <span class="footer__social-title yellow-text text-darken-1">
+                  Linkedin
+                </span>
+              </li>
+            </ul>
+          </div>
+          <div class="col s12 m4">
+            <h5 class="white-text">Account Profile</h5>
+            <a href="#">
+              <i
+                class="footer__avatar material-icons medium green darken-4 white-text"
+                >account_circle</i
+              >
+            </a>
+            <div class="row">
+              <div class="col s12 l6">
+                <a
+                  href="#"
+                  class="footer__btn btn waves-effect waves-light green darken-4 yellow-text text-darken-1"
+                  >Create</a
+                >
+              </div>
+              <div class="col s12 l6">
+                <a
+                  href="#"
+                  class="footer__btn btn waves-effect waves-light green darken-4 yellow-text text-darken-1"
+                  >Sign In</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container center">
+          Forecaster &copy; Copyright 2020
+        </div>
+      </div>
+    </footer>
+
+    <!-- Modal: Live TV -->
+    <div id="modal__live" class="modal">
+      <div class="modal-content video-container">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/UIHKFZji5NE"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <div class="modal-footer">
+        <span class="modal__title green-text text-darken-2"
+          >Forecaster Weather News Live</span
+        >
+        <span class="modal__date grey-text"> May 24, 2020</span>
+        <a href="#" class="modal-close btn-flat waves-effect waves-green"
+          ><i class="material-icons green-text">close</i></a
+        >
+      </div>
+    </div>
+
+    <!--Import jQuery before materialize.js-->
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+    ></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+
+    <!-- Scripts for Weather Graph-->
+    <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/chart.js"></script>
+
+    <script src="js/main.js"></script>
+
+    <!-- Google Maps API -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDrA9Ur7OvvqKAEJgbewIocxpGQT8xY70o&callback=initMap"
+      async
+      defer
+    ></script>
+
+    <!-- Icons Reference -->
+    <script
+      src="https://kit.fontawesome.com/3c5d2efabe.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Initialize Comp. etc for Materialize -->
+    <script>
+      $(document).ready(function () {
+        // Init Sidenav
+        $('.button-collapse').sideNav();
+
+        // Autocomplete: Search
+        $('.autocomplete').autocomplete({
+          data: {
+            Miami: null,
+            Dallas: null,
+            'New York': null,
+            Madrid: null,
+            London: null,
+            Roma: null,
+            Paris: null,
+            Dubai: null,
+          },
+        });
+
+        // Init Modal
+        $('.modal').modal();
+
+        // Init Slider
+        $('.slider').slider({
+          indicators: false,
+          height: 580,
+          transition: 500,
+          interval: 3000,
+        });
+
+        // Tabs Scrollable
+        $('ul.tabs').tabs();
+
+        // Init Collapsible
+        $('.collapsible').collapsible({
+          accordion: false,
+        });
+      });
+    </script>
+  </body>
+</html>
